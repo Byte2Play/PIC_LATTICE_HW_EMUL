@@ -1,0 +1,66 @@
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+
+# ============================================================================
+#  MachXO3L Starter Kit (LCMXO3L-6900C-5BG256C) - Mapa de I/O de usuario
+#  Todos los bancos a 3.3 V -> IO_TYPE=LVCMOS33
+#
+#  Lo que NO usa tu top esta comentado con "#". Para usarlo:
+#    1) agrega el puerto en top.v con el MISMO nombre
+#    2) quita el "#" de sus lineas aqui
+#  (Si dejas activa una linea cuyo puerto no existe, Diamond solo da warning)
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# RELOJES
+# ---------------------------------------------------------------------------
+# Oscilador interno OSCH (net "clk" dentro de top.v)
+FREQUENCY NET "clk" 12.090000 MHz ;
+
+# Cristal externo X1 de 12 MHz  ->  input wire clk_ext
+# LOCATE COMP "clk_ext" SITE "C8" ;
+# IOBUF  PORT "clk_ext" IO_TYPE=LVCMOS33 ;
+# FREQUENCY PORT "clk_ext" 12.000000 MHz ;
+
+# ---------------------------------------------------------------------------
+# BOTON SW1 (SYS_RST) - activo en bajo: suelto = 1, presionado = 0
+#   input wire rst_n
+# ---------------------------------------------------------------------------
+LOCATE COMP "rst_n" SITE "B3" ;
+IOBUF  PORT "rst_n" IO_TYPE=LVCMOS33 PULLMODE=UP ;
+
+# ---------------------------------------------------------------------------
+# LEDs D9..D2 (orden verificado en la tarjeta)
+#   output wire [7:0] led      led[0] = LSB = D9
+# ---------------------------------------------------------------------------
+LOCATE COMP "led[0]" SITE "H11" ;   # D9
+LOCATE COMP "led[1]" SITE "J13" ;   # D8
+LOCATE COMP "led[2]" SITE "J11" ;   # D7
+LOCATE COMP "led[3]" SITE "L12" ;   # D6
+LOCATE COMP "led[4]" SITE "K11" ;   # D5
+LOCATE COMP "led[5]" SITE "L13" ;   # D4
+LOCATE COMP "led[6]" SITE "N15" ;   # D3
+LOCATE COMP "led[7]" SITE "P16" ;   # D2
+
+IOBUF PORT "led[0]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[1]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[2]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[3]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[4]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[5]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[6]" IO_TYPE=LVCMOS33 ;
+IOBUF PORT "led[7]" IO_TYPE=LVCMOS33 ;
+
+# ---------------------------------------------------------------------------
+# DIP SWITCH SW2 (4 posiciones)
+#   input wire [3:0] sw        sw[0] = posicion 1
+#   (orden segun la guia; verificalo como hicimos con los LEDs)
+# ---------------------------------------------------------------------------
+# LOCATE COMP "sw[0]" SITE "P1" ;   # DIP_SW1
+# LOCATE COMP "sw[1]" SITE "M3" ;   # DIP_SW2
+# LOCATE COMP "sw[2]" SITE "N1" ;   # DIP_SW3
+# LOCATE COMP "sw[3]" SITE "N2" ;   # DIP_SW4
+# IOBUF PORT "sw[0]" IO_TYPE=LVCMOS33 PULLMODE=UP ;
+# IOBUF PORT "sw[1]" IO_TYPE=LVCMOS33 PULLMODE=UP ;
+# IOBUF PORT "sw[2]" IO_TYPE=LVCMOS33 PULLMODE=UP ;
+# IOBUF PORT "sw[3]" IO_TYPE=LVCMOS33 PULLMODE=UP ;

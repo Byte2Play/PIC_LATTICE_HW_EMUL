@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="BIT_PROCESSOR" device="LCMXO3L-6900C-5BG256C" default_implementation="impl_1">
+    <Options/>
+    <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="top" top="top"/>
+        <Source name="top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top"/>
+        </Source>
+        <Source name="clk.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="pc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="mem.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="decoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="BIT_PROCESSOR.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="impl_1/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="BIT_PROCESSOR1.sty"/>
+</BaliProject>

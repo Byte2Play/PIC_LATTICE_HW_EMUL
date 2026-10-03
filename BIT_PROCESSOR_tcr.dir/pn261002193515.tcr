@@ -1,0 +1,59 @@
+#Start recording tcl command: 10/2/2026 19:01:09
+#Project Location: D:/ADELSOFT/LATTICE/projects/bit_processor; Project name: BIT_PROCESSOR
+prj_project new -name "BIT_PROCESSOR" -impl "impl_1" -dev LCMXO3L-6900C-5BG256C -synthesis "lse"
+prj_project save
+prj_src add "D:/ADELSOFT/LATTICE/projects/bit_processor/uart_rx.v"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+pgr_project save "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src add -exclude "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src enable "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src add "D:/ADELSOFT/LATTICE/projects/bit_processor/blink.v"
+prj_src remove "D:/ADELSOFT/LATTICE/projects/bit_processor/uart_rx.v"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+pgr_project close
+prj_run Export -impl impl_1 -task Jedecgen
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+prj_run Export -impl impl_1
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src remove "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+pgr_project save "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src add -exclude "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+prj_src enable "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_program run
+pgr_project save "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+prj_run PAR -impl impl_1 -task PARTrace
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+pgr_project open "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_program run
+pgr_project save "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/impl_1.xcf"
+pgr_project close
+prj_project close
+#Stop recording: 10/2/2026 19:35:15

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "BIT_PROCESSOR_impl_1.log"
+-o "BIT_PROCESSOR_impl_1.csv"
+-pr "BIT_PROCESSOR_impl_1.prf"
