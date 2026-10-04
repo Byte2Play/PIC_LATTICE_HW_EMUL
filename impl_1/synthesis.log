@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 03 16:04:51 2026
+Sat Oct 03 23:06:38 2026
 
 
 Command Line:  synthesis -f BIT_PROCESSOR_impl_1_lattice.synproj -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml 
@@ -70,6 +70,9 @@ Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/clk.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/pc.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/mem.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/decoder.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/mux.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/alu.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/w.v
 NGD file = BIT_PROCESSOR_impl_1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -85,17 +88,24 @@ Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/clk.v. VERI-14
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/pc.v. VERI-1482
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/mem.v. VERI-1482
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/decoder.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/mux.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/alu.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/w.v. VERI-1482
 Analyzing Verilog file D:/ADELSOFT/LATTICE/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
 Top module name (Verilog): top
 INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/top.v(1): compiling module top. VERI-1018
 INFO - synthesis: D:/ADELSOFT/LATTICE/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v(1759): compiling module OSCH(NOM_FREQ="12.09"). VERI-1018
-INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/clk.v(1): compiling module clk_div(DIV=4030000). VERI-1018
-WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/clk.v(23): expression size 32 truncated to fit in target size 22. VERI-1209
+INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/clk.v(1): compiling module clk_div(DIV=806000). VERI-1018
+WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/clk.v(23): expression size 32 truncated to fit in target size 20. VERI-1209
 INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/pc.v(1): compiling module pc. VERI-1018
 WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/pc.v(21): expression size 32 truncated to fit in target size 13. VERI-1209
 INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/mem.v(1): compiling module mem. VERI-1018
 WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/mem.v(7): net rom does not have a driver. VDB-1002
 INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/decoder.v(1): compiling module decoder. VERI-1018
+INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/mux.v(1): compiling module mux. VERI-1018
+INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/alu.v(1): compiling module alu. VERI-1018
+INFO - synthesis: d:/adelsoft/lattice/projects/bit_processor/w.v(1): compiling module w. VERI-1018
+WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/top.v(87): input port b[7] is not connected on this instance. VDB-1013
 Loading NGL library 'D:/ADELSOFT/LATTICE/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'D:/ADELSOFT/LATTICE/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'D:/ADELSOFT/LATTICE/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -104,6 +114,15 @@ Loading device for application map from file 'xo3c6900.nph' in environment: D:/A
 Package Status:                     Final          Version 1.17.
 Top-level module name = top.
 WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/mem.v(7): ram rom_original_ramnet has no write-port on it. VDB-1038
+WARNING - synthesis: d:/adelsoft/lattice/projects/bit_processor/mux.v(5): net \u_mux_to_alu/b[7] does not have a driver. VDB-1002
+######## Missing driver on net \u_mux_to_alu/b[7]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[6]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[5]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[4]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[3]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[2]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[1]. Patching with GND.
+######## Missing driver on net \u_mux_to_alu/b[0]. Patching with GND.
 
 
 
@@ -121,14 +140,16 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file BIT_PROCESSOR_impl_1.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 39 of 7485 (0 % )
-CCU2D => 15
-FD1P3IX => 16
+Number of register bits => 45 of 7485 (0 % )
+CCU2D => 14
+FD1P3AX => 9
+FD1P3IX => 14
+FD1P3JX => 1
 FD1S3AX => 1
-FD1S3IX => 22
+FD1S3IX => 20
 GSR => 1
 IB => 1
-LUT4 => 38
+LUT4 => 41
 OB => 8
 OSCH => 1
 ################### End Area Report ##################
@@ -140,22 +161,23 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk, loads : 39
+  Net : clk, loads : 45
 Clock Enable Nets
-Number of Clock Enables: 1
-Top 1 highest fanout Clock Enables:
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
+  Net : clk_enable_24, loads : 3
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : u_div/n1061, loads : 24
-  Net : u_div/clk_enable_16, loads : 15
-  Net : u_pc/pc_counter_2, loads : 11
-  Net : u_pc/pc_counter_1, loads : 11
-  Net : u_pc/pc_counter_3, loads : 10
-  Net : u_pc/pc_counter_4, loads : 6
-  Net : u_pc/pc_counter_0, loads : 6
-  Net : n579, loads : 6
-  Net : n512, loads : 5
-  Net : n586, loads : 5
+  Net : u_div/n645, loads : 26
+  Net : clk_enable_24, loads : 17
+  Net : u_pc/pc_counter_4, loads : 10
+  Net : u_pc/pc_counter_2, loads : 10
+  Net : u_pc/pc_counter_3, loads : 9
+  Net : u_pc/pc_counter_1, loads : 9
+  Net : u_decoder/clk_enable_20, loads : 7
+  Net : u_div/clk_out, loads : 6
+  Net : n564, loads : 5
+  Net : u_pc/pc_counter_0, loads : 4
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -165,7 +187,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk]                     |  200.000 MHz|  109.016 MHz|     6 *
+clk0 [get_nets clk]                     |  200.000 MHz|  100.190 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -173,8 +195,8 @@ clk0 [get_nets clk]                     |  200.000 MHz|  109.016 MHz|     6 *
 1 constraints not met.
 
 
-Peak Memory Usage: 61.887  MB
+Peak Memory Usage: 62.059  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.563  secs
+Elapsed CPU time for LSE flow : 0.625  secs
 --------------------------------------------------------------

@@ -75,7 +75,7 @@
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>d:/adelsoft/lattice/projects/bit_processor/clk.v(1): </Dynamic>
-            <Dynamic>clk_div(DIV=4030000)</Dynamic>
+            <Dynamic>clk_div(DIV=806000)</Dynamic>
             <Navigation>d:/adelsoft/lattice/projects/bit_processor/clk.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -84,7 +84,7 @@
             <Severity>Warning</Severity>
             <Dynamic>d:/adelsoft/lattice/projects/bit_processor/clk.v(23): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>22</Dynamic>
+            <Dynamic>20</Dynamic>
             <Navigation>d:/adelsoft/lattice/projects/bit_processor/clk.v</Navigation>
             <Navigation>23</Navigation>
         </Message>
@@ -130,12 +130,52 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/adelsoft/lattice/projects/bit_processor/mux.v(1): </Dynamic>
+            <Dynamic>mux</Dynamic>
+            <Navigation>d:/adelsoft/lattice/projects/bit_processor/mux.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/adelsoft/lattice/projects/bit_processor/alu.v(1): </Dynamic>
+            <Dynamic>alu</Dynamic>
+            <Navigation>d:/adelsoft/lattice/projects/bit_processor/alu.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/adelsoft/lattice/projects/bit_processor/w.v(1): </Dynamic>
+            <Dynamic>w</Dynamic>
+            <Navigation>d:/adelsoft/lattice/projects/bit_processor/w.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/adelsoft/lattice/projects/bit_processor/top.v(87): </Dynamic>
+            <Dynamic>b[7]</Dynamic>
+            <Navigation>d:/adelsoft/lattice/projects/bit_processor/top.v</Navigation>
+            <Navigation>87</Navigation>
+        </Message>
+        <Message>
             <ID>35931038</ID>
             <Severity>Warning</Severity>
             <Dynamic>d:/adelsoft/lattice/projects/bit_processor/mem.v(7): </Dynamic>
             <Dynamic>rom_original_ramnet</Dynamic>
             <Navigation>d:/adelsoft/lattice/projects/bit_processor/mem.v</Navigation>
             <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/adelsoft/lattice/projects/bit_processor/mux.v(5): </Dynamic>
+            <Dynamic>\u_mux_to_alu/b[7]</Dynamic>
+            <Navigation>d:/adelsoft/lattice/projects/bit_processor/mux.v</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>

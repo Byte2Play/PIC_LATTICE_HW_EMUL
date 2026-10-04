@@ -1,19 +1,21 @@
-3001    // 00: MOVLW 0x01
-3002    // 01: MOVLW 0x02
-3004    // 02: MOVLW 0x04
-3008    // 03: MOVLW 0x08
-3010    // 04: MOVLW 0x10
-3020    // 05: MOVLW 0x20
-3040    // 06: MOVLW 0x40
+3002    // 00: MOVLW 0x02
+3004    // 01: MOVLW 0x04
+3008    // 02: MOVLW 0x08
+3010    // 03: MOVLW 0x10
+3020    // 04: MOVLW 0x20
+3040    // 05: MOVLW 0x40
+3080    // 06: MOVLW 0x80   
 3080    // 07: MOVLW 0x80
-30FF    // 08: MOVLW 0xFF
-30AA    // 09: MOVLW 0xAA
-2800    // 0A: GOTO  0x000
-0000    // 0B: NOP
-0000    // 0C: NOP
-0000    // 0D: NOP
-0000    // 0E: NOP
-0000    // 0F: NOP
+3080    // 08: MOVLW 0x80   
+3040    // 09: MOVLW 0x40
+3020    // 0A: MOVLW 0x20
+3010    // 0B: MOVLW 0x10
+3008    // 0C: MOVLW 0x08
+3004    // 0D: MOVLW 0x04
+3002    // 0E: MOVLW 0x02
+3001    // 0F: MOVLW 0x01   
+2800    // 10: GOTO  0x000
+0000    // 0F: NOP 
 0000    // 10: NOP
 0000    // 11: NOP
 0000    // 12: NOP
@@ -28,5 +30,3 @@
 0000    // 1B: NOP
 0000    // 1C: NOP
 0000    // 1D: NOP
-0000    // 1E: NOP
-0000    // 1F: NOP

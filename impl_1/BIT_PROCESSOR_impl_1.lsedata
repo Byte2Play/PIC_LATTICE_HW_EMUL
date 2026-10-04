@@ -1,8 +1,8 @@
 <top name = "top"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "clk_out"  type = "net" />
     <clockitem name = "clk"  type = "net" />
+    <clockitem name = "clk_out"  type = "net" />
 </clocks>
 
 <!--
@@ -36,22 +36,8 @@
     </pins>
 
     <!--
-        Instances in netlist: 20
+        Instances in netlist: 32
     -->
-
-    <instance  name = "u_div/clk_out_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "clk_out"  />
-        <nitem  name = "u_div/cnt_21__N_47"  />
-        <nitem  name = "u_div/clk_out_N_48"  />
-        </nets>
-    </instance>
 
     <instance  name = "u_osc"  library = "work"  arch = ""  type = "comb">
         <pins>
@@ -77,7 +63,65 @@
         </nets>
     </instance>
 
-    <instance  name = "mem_data_7__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "u_mux_to_alu/b_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mem_data[7]"  />
+        <nitem  name = "mem_data[6]"  />
+        <nitem  name = "mem_data[5]"  />
+        <nitem  name = "mem_data[4]"  />
+        <nitem  name = "mem_data[3]"  />
+        <nitem  name = "mem_data[2]"  />
+        <nitem  name = "mem_data[1]"  />
+        <nitem  name = "mem_data[0]"  />
+        <nitem  name = "u_mux_to_alu/b[7]"  />
+        <nitem  name = "u_mux_to_alu/b[6]"  />
+        <nitem  name = "u_mux_to_alu/b[5]"  />
+        <nitem  name = "u_mux_to_alu/b[4]"  />
+        <nitem  name = "u_mux_to_alu/b[3]"  />
+        <nitem  name = "u_mux_to_alu/b[2]"  />
+        <nitem  name = "u_mux_to_alu/b[1]"  />
+        <nitem  name = "u_mux_to_alu/b[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "mux_mem_to_alu[7]"  />
+        <nitem  name = "mux_mem_to_alu[6]"  />
+        <nitem  name = "mux_mem_to_alu[5]"  />
+        <nitem  name = "mux_mem_to_alu[4]"  />
+        <nitem  name = "mux_mem_to_alu[3]"  />
+        <nitem  name = "mux_mem_to_alu[2]"  />
+        <nitem  name = "mux_mem_to_alu[1]"  />
+        <nitem  name = "mux_mem_to_alu[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w_out_7__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i[7]"  direction = "in"  />
         <pitem  name = "i[6]"  direction = "in"  />
@@ -98,14 +142,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "mem_data[7]"  />
-        <nitem  name = "mem_data[6]"  />
-        <nitem  name = "mem_data[5]"  />
-        <nitem  name = "mem_data[4]"  />
-        <nitem  name = "mem_data[3]"  />
-        <nitem  name = "mem_data[2]"  />
-        <nitem  name = "mem_data[1]"  />
-        <nitem  name = "mem_data[0]"  />
+        <nitem  name = "w_out[7]"  />
+        <nitem  name = "w_out[6]"  />
+        <nitem  name = "w_out[5]"  />
+        <nitem  name = "w_out[4]"  />
+        <nitem  name = "w_out[3]"  />
+        <nitem  name = "w_out[2]"  />
+        <nitem  name = "w_out[1]"  />
+        <nitem  name = "w_out[0]"  />
         <nitem  name = "led[7]"  />
         <nitem  name = "led[6]"  />
         <nitem  name = "led[5]"  />
@@ -117,7 +161,21 @@
         </nets>
     </instance>
 
-    <instance  name = "u_div/cnt_21__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "u_div/clk_out_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk_out"  />
+        <nitem  name = "u_div/cnt_19__N_43"  />
+        <nitem  name = "u_div/clk_out_N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_div/cnt_19__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[31]"  direction = "in"  />
         <pitem  name = "a[30]"  direction = "in"  />
@@ -129,6 +187,8 @@
         <pitem  name = "a[24]"  direction = "in"  />
         <pitem  name = "a[23]"  direction = "in"  />
         <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
         <pitem  name = "b[31]"  direction = "in"  />
         <pitem  name = "b[30]"  direction = "in"  />
         <pitem  name = "b[29]"  direction = "in"  />
@@ -140,29 +200,27 @@
         <pitem  name = "b[23]"  direction = "in"  />
         <pitem  name = "b[22]"  direction = "in"  />
         <pitem  name = "b[21]"  direction = "in"  />
-        <pitem  name = "b[16]"  direction = "in"  />
-        <pitem  name = "b[14]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[20]"  direction = "in"  />
         <pitem  name = "b[19]"  direction = "in"  />
-        <pitem  name = "b[18]"  direction = "in"  />
-        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
         <pitem  name = "b[15]"  direction = "in"  />
-        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
         <pitem  name = "b[12]"  direction = "in"  />
         <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[21]"  direction = "in"  />
-        <pitem  name = "a[20]"  direction = "in"  />
         <pitem  name = "a[19]"  direction = "in"  />
         <pitem  name = "a[18]"  direction = "in"  />
         <pitem  name = "a[17]"  direction = "in"  />
@@ -189,8 +247,6 @@
         <nets>
         <nitem  name = "u_div/gnd"  />
         <nitem  name = "u_div/pwr"  />
-        <nitem  name = "u_div/cnt[21]"  />
-        <nitem  name = "u_div/cnt[20]"  />
         <nitem  name = "u_div/cnt[19]"  />
         <nitem  name = "u_div/cnt[18]"  />
         <nitem  name = "u_div/cnt[17]"  />
@@ -211,7 +267,7 @@
         <nitem  name = "u_div/cnt[2]"  />
         <nitem  name = "u_div/cnt[1]"  />
         <nitem  name = "u_div/cnt[0]"  />
-        <nitem  name = "u_div/cnt_21__N_47"  />
+        <nitem  name = "u_div/cnt_19__N_43"  />
         </nets>
     </instance>
 
@@ -228,6 +284,8 @@
         <pitem  name = "a[24]"  direction = "in"  />
         <pitem  name = "a[23]"  direction = "in"  />
         <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
         <pitem  name = "b[31]"  direction = "in"  />
         <pitem  name = "b[30]"  direction = "in"  />
         <pitem  name = "b[29]"  direction = "in"  />
@@ -260,8 +318,6 @@
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[21]"  direction = "in"  />
-        <pitem  name = "a[20]"  direction = "in"  />
         <pitem  name = "a[19]"  direction = "in"  />
         <pitem  name = "a[18]"  direction = "in"  />
         <pitem  name = "a[17]"  direction = "in"  />
@@ -282,8 +338,6 @@
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o[21]"  direction = "out"  />
-        <pitem  name = "o[20]"  direction = "out"  />
         <pitem  name = "o[19]"  direction = "out"  />
         <pitem  name = "o[18]"  direction = "out"  />
         <pitem  name = "o[17]"  direction = "out"  />
@@ -309,8 +363,6 @@
         <nets>
         <nitem  name = "u_div/gnd"  />
         <nitem  name = "u_div/pwr"  />
-        <nitem  name = "u_div/cnt[21]"  />
-        <nitem  name = "u_div/cnt[20]"  />
         <nitem  name = "u_div/cnt[19]"  />
         <nitem  name = "u_div/cnt[18]"  />
         <nitem  name = "u_div/cnt[17]"  />
@@ -331,35 +383,31 @@
         <nitem  name = "u_div/cnt[2]"  />
         <nitem  name = "u_div/cnt[1]"  />
         <nitem  name = "u_div/cnt[0]"  />
-        <nitem  name = "u_div/cnt_21__N_25[21]"  />
-        <nitem  name = "u_div/cnt_21__N_25[20]"  />
-        <nitem  name = "u_div/cnt_21__N_25[19]"  />
-        <nitem  name = "u_div/cnt_21__N_25[18]"  />
-        <nitem  name = "u_div/cnt_21__N_25[17]"  />
-        <nitem  name = "u_div/cnt_21__N_25[16]"  />
-        <nitem  name = "u_div/cnt_21__N_25[15]"  />
-        <nitem  name = "u_div/cnt_21__N_25[14]"  />
-        <nitem  name = "u_div/cnt_21__N_25[13]"  />
-        <nitem  name = "u_div/cnt_21__N_25[12]"  />
-        <nitem  name = "u_div/cnt_21__N_25[11]"  />
-        <nitem  name = "u_div/cnt_21__N_25[10]"  />
-        <nitem  name = "u_div/cnt_21__N_25[9]"  />
-        <nitem  name = "u_div/cnt_21__N_25[8]"  />
-        <nitem  name = "u_div/cnt_21__N_25[7]"  />
-        <nitem  name = "u_div/cnt_21__N_25[6]"  />
-        <nitem  name = "u_div/cnt_21__N_25[5]"  />
-        <nitem  name = "u_div/cnt_21__N_25[4]"  />
-        <nitem  name = "u_div/cnt_21__N_25[3]"  />
-        <nitem  name = "u_div/cnt_21__N_25[2]"  />
-        <nitem  name = "u_div/cnt_21__N_25[1]"  />
-        <nitem  name = "u_div/cnt_21__N_25[0]"  />
+        <nitem  name = "u_div/cnt_19__N_23[19]"  />
+        <nitem  name = "u_div/cnt_19__N_23[18]"  />
+        <nitem  name = "u_div/cnt_19__N_23[17]"  />
+        <nitem  name = "u_div/cnt_19__N_23[16]"  />
+        <nitem  name = "u_div/cnt_19__N_23[15]"  />
+        <nitem  name = "u_div/cnt_19__N_23[14]"  />
+        <nitem  name = "u_div/cnt_19__N_23[13]"  />
+        <nitem  name = "u_div/cnt_19__N_23[12]"  />
+        <nitem  name = "u_div/cnt_19__N_23[11]"  />
+        <nitem  name = "u_div/cnt_19__N_23[10]"  />
+        <nitem  name = "u_div/cnt_19__N_23[9]"  />
+        <nitem  name = "u_div/cnt_19__N_23[8]"  />
+        <nitem  name = "u_div/cnt_19__N_23[7]"  />
+        <nitem  name = "u_div/cnt_19__N_23[6]"  />
+        <nitem  name = "u_div/cnt_19__N_23[5]"  />
+        <nitem  name = "u_div/cnt_19__N_23[4]"  />
+        <nitem  name = "u_div/cnt_19__N_23[3]"  />
+        <nitem  name = "u_div/cnt_19__N_23[2]"  />
+        <nitem  name = "u_div/cnt_19__N_23[1]"  />
+        <nitem  name = "u_div/cnt_19__N_23[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "u_div/cnt_21__I_0_14"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "u_div/cnt_19__I_0_14"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d1[21]"  direction = "in"  />
-        <pitem  name = "d1[20]"  direction = "in"  />
         <pitem  name = "d1[19]"  direction = "in"  />
         <pitem  name = "d1[18]"  direction = "in"  />
         <pitem  name = "d1[17]"  direction = "in"  />
@@ -381,8 +429,6 @@
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[21]"  direction = "in"  />
-        <pitem  name = "d0[20]"  direction = "in"  />
         <pitem  name = "d0[19]"  direction = "in"  />
         <pitem  name = "d0[18]"  direction = "in"  />
         <pitem  name = "d0[17]"  direction = "in"  />
@@ -403,8 +449,6 @@
         <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "o[21]"  direction = "out"  />
-        <pitem  name = "o[20]"  direction = "out"  />
         <pitem  name = "o[19]"  direction = "out"  />
         <pitem  name = "o[18]"  direction = "out"  />
         <pitem  name = "o[17]"  direction = "out"  />
@@ -429,51 +473,47 @@
 
         <nets>
         <nitem  name = "u_div/gnd"  />
-        <nitem  name = "u_div/cnt_21__N_47"  />
-        <nitem  name = "u_div/cnt_21__N_25[21]"  />
-        <nitem  name = "u_div/cnt_21__N_25[20]"  />
-        <nitem  name = "u_div/cnt_21__N_25[19]"  />
-        <nitem  name = "u_div/cnt_21__N_25[18]"  />
-        <nitem  name = "u_div/cnt_21__N_25[17]"  />
-        <nitem  name = "u_div/cnt_21__N_25[16]"  />
-        <nitem  name = "u_div/cnt_21__N_25[15]"  />
-        <nitem  name = "u_div/cnt_21__N_25[14]"  />
-        <nitem  name = "u_div/cnt_21__N_25[13]"  />
-        <nitem  name = "u_div/cnt_21__N_25[12]"  />
-        <nitem  name = "u_div/cnt_21__N_25[11]"  />
-        <nitem  name = "u_div/cnt_21__N_25[10]"  />
-        <nitem  name = "u_div/cnt_21__N_25[9]"  />
-        <nitem  name = "u_div/cnt_21__N_25[8]"  />
-        <nitem  name = "u_div/cnt_21__N_25[7]"  />
-        <nitem  name = "u_div/cnt_21__N_25[6]"  />
-        <nitem  name = "u_div/cnt_21__N_25[5]"  />
-        <nitem  name = "u_div/cnt_21__N_25[4]"  />
-        <nitem  name = "u_div/cnt_21__N_25[3]"  />
-        <nitem  name = "u_div/cnt_21__N_25[2]"  />
-        <nitem  name = "u_div/cnt_21__N_25[1]"  />
-        <nitem  name = "u_div/cnt_21__N_25[0]"  />
-        <nitem  name = "u_div/cnt_21__N_3[21]"  />
-        <nitem  name = "u_div/cnt_21__N_3[20]"  />
-        <nitem  name = "u_div/cnt_21__N_3[19]"  />
-        <nitem  name = "u_div/cnt_21__N_3[18]"  />
-        <nitem  name = "u_div/cnt_21__N_3[17]"  />
-        <nitem  name = "u_div/cnt_21__N_3[16]"  />
-        <nitem  name = "u_div/cnt_21__N_3[15]"  />
-        <nitem  name = "u_div/cnt_21__N_3[14]"  />
-        <nitem  name = "u_div/cnt_21__N_3[13]"  />
-        <nitem  name = "u_div/cnt_21__N_3[12]"  />
-        <nitem  name = "u_div/cnt_21__N_3[11]"  />
-        <nitem  name = "u_div/cnt_21__N_3[10]"  />
-        <nitem  name = "u_div/cnt_21__N_3[9]"  />
-        <nitem  name = "u_div/cnt_21__N_3[8]"  />
-        <nitem  name = "u_div/cnt_21__N_3[7]"  />
-        <nitem  name = "u_div/cnt_21__N_3[6]"  />
-        <nitem  name = "u_div/cnt_21__N_3[5]"  />
-        <nitem  name = "u_div/cnt_21__N_3[4]"  />
-        <nitem  name = "u_div/cnt_21__N_3[3]"  />
-        <nitem  name = "u_div/cnt_21__N_3[2]"  />
-        <nitem  name = "u_div/cnt_21__N_3[1]"  />
-        <nitem  name = "u_div/cnt_21__N_3[0]"  />
+        <nitem  name = "u_div/cnt_19__N_43"  />
+        <nitem  name = "u_div/cnt_19__N_23[19]"  />
+        <nitem  name = "u_div/cnt_19__N_23[18]"  />
+        <nitem  name = "u_div/cnt_19__N_23[17]"  />
+        <nitem  name = "u_div/cnt_19__N_23[16]"  />
+        <nitem  name = "u_div/cnt_19__N_23[15]"  />
+        <nitem  name = "u_div/cnt_19__N_23[14]"  />
+        <nitem  name = "u_div/cnt_19__N_23[13]"  />
+        <nitem  name = "u_div/cnt_19__N_23[12]"  />
+        <nitem  name = "u_div/cnt_19__N_23[11]"  />
+        <nitem  name = "u_div/cnt_19__N_23[10]"  />
+        <nitem  name = "u_div/cnt_19__N_23[9]"  />
+        <nitem  name = "u_div/cnt_19__N_23[8]"  />
+        <nitem  name = "u_div/cnt_19__N_23[7]"  />
+        <nitem  name = "u_div/cnt_19__N_23[6]"  />
+        <nitem  name = "u_div/cnt_19__N_23[5]"  />
+        <nitem  name = "u_div/cnt_19__N_23[4]"  />
+        <nitem  name = "u_div/cnt_19__N_23[3]"  />
+        <nitem  name = "u_div/cnt_19__N_23[2]"  />
+        <nitem  name = "u_div/cnt_19__N_23[1]"  />
+        <nitem  name = "u_div/cnt_19__N_23[0]"  />
+        <nitem  name = "u_div/cnt_19__N_3[19]"  />
+        <nitem  name = "u_div/cnt_19__N_3[18]"  />
+        <nitem  name = "u_div/cnt_19__N_3[17]"  />
+        <nitem  name = "u_div/cnt_19__N_3[16]"  />
+        <nitem  name = "u_div/cnt_19__N_3[15]"  />
+        <nitem  name = "u_div/cnt_19__N_3[14]"  />
+        <nitem  name = "u_div/cnt_19__N_3[13]"  />
+        <nitem  name = "u_div/cnt_19__N_3[12]"  />
+        <nitem  name = "u_div/cnt_19__N_3[11]"  />
+        <nitem  name = "u_div/cnt_19__N_3[10]"  />
+        <nitem  name = "u_div/cnt_19__N_3[9]"  />
+        <nitem  name = "u_div/cnt_19__N_3[8]"  />
+        <nitem  name = "u_div/cnt_19__N_3[7]"  />
+        <nitem  name = "u_div/cnt_19__N_3[6]"  />
+        <nitem  name = "u_div/cnt_19__N_3[5]"  />
+        <nitem  name = "u_div/cnt_19__N_3[4]"  />
+        <nitem  name = "u_div/cnt_19__N_3[3]"  />
+        <nitem  name = "u_div/cnt_19__N_3[2]"  />
+        <nitem  name = "u_div/cnt_19__N_3[1]"  />
+        <nitem  name = "u_div/cnt_19__N_3[0]"  />
         </nets>
     </instance>
 
@@ -490,14 +530,12 @@
         <nitem  name = "u_div/gnd"  />
         <nitem  name = "clk"  />
         <nitem  name = "clk_out"  />
-        <nitem  name = "u_div/clk_out_N_48"  />
+        <nitem  name = "u_div/clk_out_N_44"  />
         </nets>
     </instance>
 
     <instance  name = "u_div/cnt"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "set[21]"  direction = "in"  />
-        <pitem  name = "set[20]"  direction = "in"  />
         <pitem  name = "set[19]"  direction = "in"  />
         <pitem  name = "set[18]"  direction = "in"  />
         <pitem  name = "set[17]"  direction = "in"  />
@@ -518,8 +556,6 @@
         <pitem  name = "set[2]"  direction = "in"  />
         <pitem  name = "set[1]"  direction = "in"  />
         <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "reset[21]"  direction = "in"  />
-        <pitem  name = "reset[20]"  direction = "in"  />
         <pitem  name = "reset[19]"  direction = "in"  />
         <pitem  name = "reset[18]"  direction = "in"  />
         <pitem  name = "reset[17]"  direction = "in"  />
@@ -541,8 +577,6 @@
         <pitem  name = "reset[1]"  direction = "in"  />
         <pitem  name = "reset[0]"  direction = "in"  />
         <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[21]"  direction = "out"  />
-        <pitem  name = "q[20]"  direction = "out"  />
         <pitem  name = "q[19]"  direction = "out"  />
         <pitem  name = "q[18]"  direction = "out"  />
         <pitem  name = "q[17]"  direction = "out"  />
@@ -563,8 +597,6 @@
         <pitem  name = "q[2]"  direction = "out"  />
         <pitem  name = "q[1]"  direction = "out"  />
         <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[21]"  direction = "in"  />
-        <pitem  name = "d[20]"  direction = "in"  />
         <pitem  name = "d[19]"  direction = "in"  />
         <pitem  name = "d[18]"  direction = "in"  />
         <pitem  name = "d[17]"  direction = "in"  />
@@ -590,8 +622,6 @@
         <nets>
         <nitem  name = "u_div/gnd"  />
         <nitem  name = "clk"  />
-        <nitem  name = "u_div/cnt[21]"  />
-        <nitem  name = "u_div/cnt[20]"  />
         <nitem  name = "u_div/cnt[19]"  />
         <nitem  name = "u_div/cnt[18]"  />
         <nitem  name = "u_div/cnt[17]"  />
@@ -612,28 +642,26 @@
         <nitem  name = "u_div/cnt[2]"  />
         <nitem  name = "u_div/cnt[1]"  />
         <nitem  name = "u_div/cnt[0]"  />
-        <nitem  name = "u_div/cnt_21__N_3[21]"  />
-        <nitem  name = "u_div/cnt_21__N_3[20]"  />
-        <nitem  name = "u_div/cnt_21__N_3[19]"  />
-        <nitem  name = "u_div/cnt_21__N_3[18]"  />
-        <nitem  name = "u_div/cnt_21__N_3[17]"  />
-        <nitem  name = "u_div/cnt_21__N_3[16]"  />
-        <nitem  name = "u_div/cnt_21__N_3[15]"  />
-        <nitem  name = "u_div/cnt_21__N_3[14]"  />
-        <nitem  name = "u_div/cnt_21__N_3[13]"  />
-        <nitem  name = "u_div/cnt_21__N_3[12]"  />
-        <nitem  name = "u_div/cnt_21__N_3[11]"  />
-        <nitem  name = "u_div/cnt_21__N_3[10]"  />
-        <nitem  name = "u_div/cnt_21__N_3[9]"  />
-        <nitem  name = "u_div/cnt_21__N_3[8]"  />
-        <nitem  name = "u_div/cnt_21__N_3[7]"  />
-        <nitem  name = "u_div/cnt_21__N_3[6]"  />
-        <nitem  name = "u_div/cnt_21__N_3[5]"  />
-        <nitem  name = "u_div/cnt_21__N_3[4]"  />
-        <nitem  name = "u_div/cnt_21__N_3[3]"  />
-        <nitem  name = "u_div/cnt_21__N_3[2]"  />
-        <nitem  name = "u_div/cnt_21__N_3[1]"  />
-        <nitem  name = "u_div/cnt_21__N_3[0]"  />
+        <nitem  name = "u_div/cnt_19__N_3[19]"  />
+        <nitem  name = "u_div/cnt_19__N_3[18]"  />
+        <nitem  name = "u_div/cnt_19__N_3[17]"  />
+        <nitem  name = "u_div/cnt_19__N_3[16]"  />
+        <nitem  name = "u_div/cnt_19__N_3[15]"  />
+        <nitem  name = "u_div/cnt_19__N_3[14]"  />
+        <nitem  name = "u_div/cnt_19__N_3[13]"  />
+        <nitem  name = "u_div/cnt_19__N_3[12]"  />
+        <nitem  name = "u_div/cnt_19__N_3[11]"  />
+        <nitem  name = "u_div/cnt_19__N_3[10]"  />
+        <nitem  name = "u_div/cnt_19__N_3[9]"  />
+        <nitem  name = "u_div/cnt_19__N_3[8]"  />
+        <nitem  name = "u_div/cnt_19__N_3[7]"  />
+        <nitem  name = "u_div/cnt_19__N_3[6]"  />
+        <nitem  name = "u_div/cnt_19__N_3[5]"  />
+        <nitem  name = "u_div/cnt_19__N_3[4]"  />
+        <nitem  name = "u_div/cnt_19__N_3[3]"  />
+        <nitem  name = "u_div/cnt_19__N_3[2]"  />
+        <nitem  name = "u_div/cnt_19__N_3[1]"  />
+        <nitem  name = "u_div/cnt_19__N_3[0]"  />
         </nets>
     </instance>
 
@@ -822,19 +850,19 @@
         <nitem  name = "u_pc/n33"  />
         <nitem  name = "u_pc/n34"  />
         <nitem  name = "u_pc/n35"  />
-        <nitem  name = "u_pc/counter_12__N_62[12]"  />
-        <nitem  name = "u_pc/counter_12__N_62[11]"  />
-        <nitem  name = "u_pc/counter_12__N_62[10]"  />
-        <nitem  name = "u_pc/counter_12__N_62[9]"  />
-        <nitem  name = "u_pc/counter_12__N_62[8]"  />
-        <nitem  name = "u_pc/counter_12__N_62[7]"  />
-        <nitem  name = "u_pc/counter_12__N_62[6]"  />
-        <nitem  name = "u_pc/counter_12__N_62[5]"  />
-        <nitem  name = "u_pc/counter_12__N_62[4]"  />
-        <nitem  name = "u_pc/counter_12__N_62[3]"  />
-        <nitem  name = "u_pc/counter_12__N_62[2]"  />
-        <nitem  name = "u_pc/counter_12__N_62[1]"  />
-        <nitem  name = "u_pc/counter_12__N_62[0]"  />
+        <nitem  name = "u_pc/counter_12__N_58[12]"  />
+        <nitem  name = "u_pc/counter_12__N_58[11]"  />
+        <nitem  name = "u_pc/counter_12__N_58[10]"  />
+        <nitem  name = "u_pc/counter_12__N_58[9]"  />
+        <nitem  name = "u_pc/counter_12__N_58[8]"  />
+        <nitem  name = "u_pc/counter_12__N_58[7]"  />
+        <nitem  name = "u_pc/counter_12__N_58[6]"  />
+        <nitem  name = "u_pc/counter_12__N_58[5]"  />
+        <nitem  name = "u_pc/counter_12__N_58[4]"  />
+        <nitem  name = "u_pc/counter_12__N_58[3]"  />
+        <nitem  name = "u_pc/counter_12__N_58[2]"  />
+        <nitem  name = "u_pc/counter_12__N_58[1]"  />
+        <nitem  name = "u_pc/counter_12__N_58[0]"  />
         </nets>
     </instance>
 
@@ -885,32 +913,32 @@
         <nets>
         <nitem  name = "u_pc/gnd"  />
         <nitem  name = "rst_n_N_2"  />
-        <nitem  name = "u_pc/counter_12__N_62[12]"  />
-        <nitem  name = "u_pc/counter_12__N_62[11]"  />
-        <nitem  name = "u_pc/counter_12__N_62[10]"  />
-        <nitem  name = "u_pc/counter_12__N_62[9]"  />
-        <nitem  name = "u_pc/counter_12__N_62[8]"  />
-        <nitem  name = "u_pc/counter_12__N_62[7]"  />
-        <nitem  name = "u_pc/counter_12__N_62[6]"  />
-        <nitem  name = "u_pc/counter_12__N_62[5]"  />
-        <nitem  name = "u_pc/counter_12__N_62[4]"  />
-        <nitem  name = "u_pc/counter_12__N_62[3]"  />
-        <nitem  name = "u_pc/counter_12__N_62[2]"  />
-        <nitem  name = "u_pc/counter_12__N_62[1]"  />
-        <nitem  name = "u_pc/counter_12__N_62[0]"  />
-        <nitem  name = "u_pc/counter_12__N_49[12]"  />
-        <nitem  name = "u_pc/counter_12__N_49[11]"  />
-        <nitem  name = "u_pc/counter_12__N_49[10]"  />
-        <nitem  name = "u_pc/counter_12__N_49[9]"  />
-        <nitem  name = "u_pc/counter_12__N_49[8]"  />
-        <nitem  name = "u_pc/counter_12__N_49[7]"  />
-        <nitem  name = "u_pc/counter_12__N_49[6]"  />
-        <nitem  name = "u_pc/counter_12__N_49[5]"  />
-        <nitem  name = "u_pc/counter_12__N_49[4]"  />
-        <nitem  name = "u_pc/counter_12__N_49[3]"  />
-        <nitem  name = "u_pc/counter_12__N_49[2]"  />
-        <nitem  name = "u_pc/counter_12__N_49[1]"  />
-        <nitem  name = "u_pc/counter_12__N_49[0]"  />
+        <nitem  name = "u_pc/counter_12__N_58[12]"  />
+        <nitem  name = "u_pc/counter_12__N_58[11]"  />
+        <nitem  name = "u_pc/counter_12__N_58[10]"  />
+        <nitem  name = "u_pc/counter_12__N_58[9]"  />
+        <nitem  name = "u_pc/counter_12__N_58[8]"  />
+        <nitem  name = "u_pc/counter_12__N_58[7]"  />
+        <nitem  name = "u_pc/counter_12__N_58[6]"  />
+        <nitem  name = "u_pc/counter_12__N_58[5]"  />
+        <nitem  name = "u_pc/counter_12__N_58[4]"  />
+        <nitem  name = "u_pc/counter_12__N_58[3]"  />
+        <nitem  name = "u_pc/counter_12__N_58[2]"  />
+        <nitem  name = "u_pc/counter_12__N_58[1]"  />
+        <nitem  name = "u_pc/counter_12__N_58[0]"  />
+        <nitem  name = "u_pc/counter_12__N_45[12]"  />
+        <nitem  name = "u_pc/counter_12__N_45[11]"  />
+        <nitem  name = "u_pc/counter_12__N_45[10]"  />
+        <nitem  name = "u_pc/counter_12__N_45[9]"  />
+        <nitem  name = "u_pc/counter_12__N_45[8]"  />
+        <nitem  name = "u_pc/counter_12__N_45[7]"  />
+        <nitem  name = "u_pc/counter_12__N_45[6]"  />
+        <nitem  name = "u_pc/counter_12__N_45[5]"  />
+        <nitem  name = "u_pc/counter_12__N_45[4]"  />
+        <nitem  name = "u_pc/counter_12__N_45[3]"  />
+        <nitem  name = "u_pc/counter_12__N_45[2]"  />
+        <nitem  name = "u_pc/counter_12__N_45[1]"  />
+        <nitem  name = "u_pc/counter_12__N_45[0]"  />
         </nets>
     </instance>
 
@@ -987,19 +1015,19 @@
         <nitem  name = "pc_counter[2]"  />
         <nitem  name = "pc_counter[1]"  />
         <nitem  name = "pc_counter[0]"  />
-        <nitem  name = "u_pc/counter_12__N_49[12]"  />
-        <nitem  name = "u_pc/counter_12__N_49[11]"  />
-        <nitem  name = "u_pc/counter_12__N_49[10]"  />
-        <nitem  name = "u_pc/counter_12__N_49[9]"  />
-        <nitem  name = "u_pc/counter_12__N_49[8]"  />
-        <nitem  name = "u_pc/counter_12__N_49[7]"  />
-        <nitem  name = "u_pc/counter_12__N_49[6]"  />
-        <nitem  name = "u_pc/counter_12__N_49[5]"  />
-        <nitem  name = "u_pc/counter_12__N_49[4]"  />
-        <nitem  name = "u_pc/counter_12__N_49[3]"  />
-        <nitem  name = "u_pc/counter_12__N_49[2]"  />
-        <nitem  name = "u_pc/counter_12__N_49[1]"  />
-        <nitem  name = "u_pc/counter_12__N_49[0]"  />
+        <nitem  name = "u_pc/counter_12__N_45[12]"  />
+        <nitem  name = "u_pc/counter_12__N_45[11]"  />
+        <nitem  name = "u_pc/counter_12__N_45[10]"  />
+        <nitem  name = "u_pc/counter_12__N_45[9]"  />
+        <nitem  name = "u_pc/counter_12__N_45[8]"  />
+        <nitem  name = "u_pc/counter_12__N_45[7]"  />
+        <nitem  name = "u_pc/counter_12__N_45[6]"  />
+        <nitem  name = "u_pc/counter_12__N_45[5]"  />
+        <nitem  name = "u_pc/counter_12__N_45[4]"  />
+        <nitem  name = "u_pc/counter_12__N_45[3]"  />
+        <nitem  name = "u_pc/counter_12__N_45[2]"  />
+        <nitem  name = "u_pc/counter_12__N_45[1]"  />
+        <nitem  name = "u_pc/counter_12__N_45[0]"  />
         </nets>
     </instance>
 
@@ -1036,20 +1064,20 @@
         <nitem  name = "pc_counter[1]"  />
         <nitem  name = "pc_counter[0]"  />
         <nitem  name = "u_mem/rom"  />
-        <nitem  name = "u_mem/dato_13__N_75[13]"  />
-        <nitem  name = "u_mem/dato_13__N_75[12]"  />
-        <nitem  name = "u_mem/dato_13__N_75[11]"  />
-        <nitem  name = "u_mem/dato_13__N_75[10]"  />
-        <nitem  name = "u_mem/dato_13__N_75[9]"  />
-        <nitem  name = "u_mem/dato_13__N_75[8]"  />
-        <nitem  name = "u_mem/dato_13__N_75[7]"  />
-        <nitem  name = "u_mem/dato_13__N_75[6]"  />
-        <nitem  name = "u_mem/dato_13__N_75[5]"  />
-        <nitem  name = "u_mem/dato_13__N_75[4]"  />
-        <nitem  name = "u_mem/dato_13__N_75[3]"  />
-        <nitem  name = "u_mem/dato_13__N_75[2]"  />
-        <nitem  name = "u_mem/dato_13__N_75[1]"  />
-        <nitem  name = "u_mem/dato_13__N_75[0]"  />
+        <nitem  name = "u_mem/dato_13__N_71[13]"  />
+        <nitem  name = "u_mem/dato_13__N_71[12]"  />
+        <nitem  name = "u_mem/dato_13__N_71[11]"  />
+        <nitem  name = "u_mem/dato_13__N_71[10]"  />
+        <nitem  name = "u_mem/dato_13__N_71[9]"  />
+        <nitem  name = "u_mem/dato_13__N_71[8]"  />
+        <nitem  name = "u_mem/dato_13__N_71[7]"  />
+        <nitem  name = "u_mem/dato_13__N_71[6]"  />
+        <nitem  name = "u_mem/dato_13__N_71[5]"  />
+        <nitem  name = "u_mem/dato_13__N_71[4]"  />
+        <nitem  name = "u_mem/dato_13__N_71[3]"  />
+        <nitem  name = "u_mem/dato_13__N_71[2]"  />
+        <nitem  name = "u_mem/dato_13__N_71[1]"  />
+        <nitem  name = "u_mem/dato_13__N_71[0]"  />
         </nets>
     </instance>
 
@@ -1131,28 +1159,70 @@
         <nitem  name = "mem_data[2]"  />
         <nitem  name = "mem_data[1]"  />
         <nitem  name = "mem_data[0]"  />
-        <nitem  name = "u_mem/dato_13__N_75[13]"  />
-        <nitem  name = "u_mem/dato_13__N_75[12]"  />
-        <nitem  name = "u_mem/dato_13__N_75[11]"  />
-        <nitem  name = "u_mem/dato_13__N_75[10]"  />
-        <nitem  name = "u_mem/dato_13__N_75[9]"  />
-        <nitem  name = "u_mem/dato_13__N_75[8]"  />
-        <nitem  name = "u_mem/dato_13__N_75[7]"  />
-        <nitem  name = "u_mem/dato_13__N_75[6]"  />
-        <nitem  name = "u_mem/dato_13__N_75[5]"  />
-        <nitem  name = "u_mem/dato_13__N_75[4]"  />
-        <nitem  name = "u_mem/dato_13__N_75[3]"  />
-        <nitem  name = "u_mem/dato_13__N_75[2]"  />
-        <nitem  name = "u_mem/dato_13__N_75[1]"  />
-        <nitem  name = "u_mem/dato_13__N_75[0]"  />
+        <nitem  name = "u_mem/dato_13__N_71[13]"  />
+        <nitem  name = "u_mem/dato_13__N_71[12]"  />
+        <nitem  name = "u_mem/dato_13__N_71[11]"  />
+        <nitem  name = "u_mem/dato_13__N_71[10]"  />
+        <nitem  name = "u_mem/dato_13__N_71[9]"  />
+        <nitem  name = "u_mem/dato_13__N_71[8]"  />
+        <nitem  name = "u_mem/dato_13__N_71[7]"  />
+        <nitem  name = "u_mem/dato_13__N_71[6]"  />
+        <nitem  name = "u_mem/dato_13__N_71[5]"  />
+        <nitem  name = "u_mem/dato_13__N_71[4]"  />
+        <nitem  name = "u_mem/dato_13__N_71[3]"  />
+        <nitem  name = "u_mem/dato_13__N_71[2]"  />
+        <nitem  name = "u_mem/dato_13__N_71[1]"  />
+        <nitem  name = "u_mem/dato_13__N_71[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_decoder/instruction_11__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mem_data[11]"  />
+        <nitem  name = "u_decoder/instruction_11__N_88"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_decoder/instruction_13__I_0_11"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mem_data[13]"  />
+        <nitem  name = "u_decoder/instruction_13__N_86"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_decoder/jump_to_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "mem_data[12]"  />
+        <nitem  name = "jump_to"  />
+        <nitem  name = "u_decoder/instruction_11__N_88"  />
+        <nitem  name = "u_decoder/instruction_13__N_86"  />
         </nets>
     </instance>
 
     <instance  name = "u_decoder/instruction_13__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
@@ -1165,16 +1235,218 @@
         <nitem  name = "mem_data[13]"  />
         <nitem  name = "mem_data[12]"  />
         <nitem  name = "mem_data[11]"  />
-        <nitem  name = "jump_to"  />
+        <nitem  name = "mem_data[10]"  />
+        <nitem  name = "w_we"  />
         </nets>
     </instance>
 
+    <instance  name = "u_alu/sel_1__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "u_alu/gnd"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "u_alu/c_7__N_89"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_alu/c_7__N_89_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "u_alu/c_7__N_89"  />
+        <nitem  name = "u_alu/c_7__N_91"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_alu/c_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[7]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
+        <pitem  name = "data[5]"  direction = "in"  />
+        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "data[15]"  direction = "in"  />
+        <pitem  name = "data[14]"  direction = "in"  />
+        <pitem  name = "data[13]"  direction = "in"  />
+        <pitem  name = "data[12]"  direction = "in"  />
+        <pitem  name = "data[11]"  direction = "in"  />
+        <pitem  name = "data[10]"  direction = "in"  />
+        <pitem  name = "data[9]"  direction = "in"  />
+        <pitem  name = "data[8]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "u_alu/gnd"  />
+        <nitem  name = "mux_mem_to_alu[7]"  />
+        <nitem  name = "mux_mem_to_alu[6]"  />
+        <nitem  name = "mux_mem_to_alu[5]"  />
+        <nitem  name = "mux_mem_to_alu[4]"  />
+        <nitem  name = "mux_mem_to_alu[3]"  />
+        <nitem  name = "mux_mem_to_alu[2]"  />
+        <nitem  name = "mux_mem_to_alu[1]"  />
+        <nitem  name = "mux_mem_to_alu[0]"  />
+        <nitem  name = "alu_out[7]"  />
+        <nitem  name = "alu_out[6]"  />
+        <nitem  name = "alu_out[5]"  />
+        <nitem  name = "alu_out[4]"  />
+        <nitem  name = "alu_out[3]"  />
+        <nitem  name = "alu_out[2]"  />
+        <nitem  name = "alu_out[1]"  />
+        <nitem  name = "alu_out[0]"  />
+        <nitem  name = "u_alu/c_7__N_89"  />
+        <nitem  name = "u_alu/c_7__N_91"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w/w_out_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "w_we"  />
+        <nitem  name = "alu_out[7]"  />
+        <nitem  name = "alu_out[6]"  />
+        <nitem  name = "alu_out[5]"  />
+        <nitem  name = "alu_out[4]"  />
+        <nitem  name = "alu_out[3]"  />
+        <nitem  name = "alu_out[2]"  />
+        <nitem  name = "alu_out[1]"  />
+        <nitem  name = "alu_out[0]"  />
+        <nitem  name = "w_out[7]"  />
+        <nitem  name = "w_out[6]"  />
+        <nitem  name = "w_out[5]"  />
+        <nitem  name = "w_out[4]"  />
+        <nitem  name = "w_out[3]"  />
+        <nitem  name = "w_out[2]"  />
+        <nitem  name = "w_out[1]"  />
+        <nitem  name = "w_out[0]"  />
+        <nitem  name = "w/w_out_7__N_92[7]"  />
+        <nitem  name = "w/w_out_7__N_92[6]"  />
+        <nitem  name = "w/w_out_7__N_92[5]"  />
+        <nitem  name = "w/w_out_7__N_92[4]"  />
+        <nitem  name = "w/w_out_7__N_92[3]"  />
+        <nitem  name = "w/w_out_7__N_92[2]"  />
+        <nitem  name = "w/w_out_7__N_92[1]"  />
+        <nitem  name = "w/w_out_7__N_92[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "w/w_out"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "w/gnd"  />
+        <nitem  name = "clk_out"  />
+        <nitem  name = "w_out[7]"  />
+        <nitem  name = "w_out[6]"  />
+        <nitem  name = "w_out[5]"  />
+        <nitem  name = "w_out[4]"  />
+        <nitem  name = "w_out[3]"  />
+        <nitem  name = "w_out[2]"  />
+        <nitem  name = "w_out[1]"  />
+        <nitem  name = "w_out[0]"  />
+        <nitem  name = "w/w_out_7__N_92[7]"  />
+        <nitem  name = "w/w_out_7__N_92[6]"  />
+        <nitem  name = "w/w_out_7__N_92[5]"  />
+        <nitem  name = "w/w_out_7__N_92[4]"  />
+        <nitem  name = "w/w_out_7__N_92[3]"  />
+        <nitem  name = "w/w_out_7__N_92[2]"  />
+        <nitem  name = "w/w_out_7__N_92[1]"  />
+        <nitem  name = "w/w_out_7__N_92[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "u_alu"  />
     <instance  name = "u_decoder"  />
     <instance  name = "u_div"  />
     <instance  name = "u_mem"  />
+    <instance  name = "u_mux_to_alu"  />
     <instance  name = "u_pc"  />
+    <instance  name = "w"  />
     <!--
-        REG instances in netlist: 4
+        REG instances in netlist: 5
     -->
 
     <regs>
@@ -1182,6 +1454,7 @@
         <reg  name = "u_div/cnt"  />
         <reg  name = "u_pc/counter"  />
         <reg  name = "u_mem/dato"  />
+        <reg  name = "w/w_out"  />
     </regs>
 
     <!--
@@ -1193,14 +1466,17 @@
     </romnets>
 
     <!--
-        Views in design "top": 4
+        Views in design "top": 7
     -->
 
     <views>
-        <view  name = "clk_div(DIV=4030000)"  />
+        <view  name = "alu"  />
+        <view  name = "clk_div(DIV=806000)"  />
         <view  name = "decoder"  />
         <view  name = "mem"  />
+        <view  name = "mux"  />
         <view  name = "pc"  />
+        <view  name = "w"  />
     </views>
 
 </unit>

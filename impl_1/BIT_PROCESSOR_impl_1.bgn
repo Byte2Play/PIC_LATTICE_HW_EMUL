@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 03 16:05:02 2026
+Sat Oct 03 23:06:48 2026
 
 
 Command: bitgen -g RamCfg:Reset -path D:/ADELSOFT/LATTICE/projects/bit_processor -w -jedec -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml BIT_PROCESSOR_impl_1.ncd BIT_PROCESSOR_impl_1.prf 
@@ -78,9 +78,9 @@ Saving bit stream in "BIT_PROCESSOR_impl_1.jed".
 =========
 Padding summary
 =========
-Padded 1237248 bits for this design
+Padded 1236864 bits for this design
 
 
 Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 3 secs 
 Peak Memory Usage: 290 MB

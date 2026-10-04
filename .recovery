@@ -18,6 +18,15 @@
         <Source name="decoder.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="mux.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="alu.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="w.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="BIT_PROCESSOR.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>

@@ -15,22 +15,22 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO3L-6900CCABGA256
 Target Performance:   5
 Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  10/03/26  16:04:52
+Mapped on:  10/03/26  23:06:39
 
 Design Summary
 --------------
 
-   Number of registers:     39 out of  7485 (1%)
-      PFU registers:           39 out of  6864 (1%)
+   Number of registers:     45 out of  7485 (1%)
+      PFU registers:           45 out of  6864 (1%)
       PIO registers:            0 out of   621 (0%)
-   Number of SLICEs:        34 out of  3432 (1%)
-      SLICEs as Logic/ROM:     34 out of  3432 (1%)
+   Number of SLICEs:        39 out of  3432 (1%)
+      SLICEs as Logic/ROM:     39 out of  3432 (1%)
       SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:         15 out of  3432 (0%)
-   Number of LUT4s:         68 out of  6864 (1%)
-      Number used as logic LUTs:         38
+      SLICEs as Carry:         14 out of  3432 (0%)
+   Number of LUT4s:         69 out of  6864 (1%)
+      Number used as logic LUTs:         41
       Number used as distributed RAM:     0
-      Number used as ripple logic:       30
+      Number used as ripple logic:       28
       Number used as shift registers:     0
    Number of PIO sites used: 9 + 4(JTAG) out of 207 (6%)
    Number of block RAMs:  0 out of 26 (0%)
@@ -58,36 +58,39 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  1
-     Net clk: 26 loads, 26 rising, 0 falling (Driver: u_osc )
-   Number of Clock Enables:  1
+     Net clk: 30 loads, 30 rising, 0 falling (Driver: u_osc )
+   Number of Clock Enables:  2
 
                                     Page 1
 
 
 
 
-Design:  top                                           Date:  10/03/26  16:04:52
+Design:  top                                           Date:  10/03/26  23:06:39
 
 Design Summary (cont)
 ---------------------
-     Net clk_enable_16: 13 loads, 13 LSLICEs
-   Number of LSRs:  4
-     Net n512: 3 loads, 3 LSLICEs
-     Net n1061: 12 loads, 12 LSLICEs
-     Net n586: 5 loads, 5 LSLICEs
-     Net n579: 5 loads, 5 LSLICEs
+     Net clk_enable_20: 4 loads, 4 LSLICEs
+     Net clk_enable_24: 14 loads, 14 LSLICEs
+   Number of LSRs:  6
+     Net n645: 11 loads, 11 LSLICEs
+     Net n695: 4 loads, 4 LSLICEs
+     Net n649: 1 loads, 1 LSLICEs
+     Net n564: 3 loads, 3 LSLICEs
+     Net n694: 4 loads, 4 LSLICEs
+     Net n872: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n1061: 15 loads
-     Net clk_enable_16: 13 loads
-     Net pc_counter_1: 12 loads
-     Net pc_counter_2: 12 loads
-     Net pc_counter_3: 11 loads
-     Net pc_counter_0: 7 loads
-     Net pc_counter_4: 7 loads
-     Net clk_out: 5 loads
-     Net n5: 5 loads
-     Net n586: 5 loads
+     Net n645: 18 loads
+     Net clk_enable_24: 15 loads
+     Net pc_counter_2: 11 loads
+     Net pc_counter_4: 11 loads
+     Net pc_counter_1: 10 loads
+     Net pc_counter_3: 10 loads
+     Net clk_out: 7 loads
+     Net n2: 5 loads
+     Net pc_counter_0: 5 loads
+     Net clk_enable_20: 4 loads
 
 
 
@@ -123,29 +126,31 @@ IO (PIO) Attributes
 | led[4]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | led[5]              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| led[6]              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 
                                     Page 2
 
 
 
 
-Design:  top                                           Date:  10/03/26  16:04:52
+Design:  top                                           Date:  10/03/26  23:06:39
 
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 
 Removed logic
 -------------
 
-Block i7 undriven or does not drive anything - clipped.
+Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal u_div/cnt_50_add_4_23/S1 undriven or does not drive anything - clipped.
-Signal u_div/cnt_50_add_4_23/CO undriven or does not drive anything - clipped.
-Signal u_div/cnt_50_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal u_div/cnt_50_add_4_1/CI undriven or does not drive anything - clipped.
+Signal u_div/cnt_59_add_4_21/S1 undriven or does not drive anything - clipped.
+Signal u_div/cnt_59_add_4_21/CO undriven or does not drive anything - clipped.
+Signal u_div/cnt_59_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal u_div/cnt_59_add_4_1/CI undriven or does not drive anything - clipped.
 Signal u_pc/add_10_5/CO undriven or does not drive anything - clipped.
 Signal u_pc/add_10_1/S0 undriven or does not drive anything - clipped.
 Signal u_pc/add_10_1/CI undriven or does not drive anything - clipped.
@@ -176,11 +181,6 @@ Run Time and Memory Usage
    Total REAL Time: 0 secs  
    Peak Memory Usage: 59 MB
         
-
-
-
-
-
 
 
 

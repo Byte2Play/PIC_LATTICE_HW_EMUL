@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/BIT_PROCESSOR_impl_1.bit</File>
-			<FileTime>10/03/26 16:05:02</FileTime>
-			<JedecChecksum>0x15ED</JedecChecksum>
+			<FileTime>10/03/26 23:04:37</FileTime>
+			<JedecChecksum>0x1408</JedecChecksum>
 			<Operation>SRAM Fast Configuration</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

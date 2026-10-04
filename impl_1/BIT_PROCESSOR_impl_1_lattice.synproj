@@ -37,6 +37,9 @@
 "D:/ADELSOFT/LATTICE/projects/bit_processor/pc.v"
 "D:/ADELSOFT/LATTICE/projects/bit_processor/mem.v"
 "D:/ADELSOFT/LATTICE/projects/bit_processor/decoder.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/mux.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/alu.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/w.v"
 -top top
 
 
