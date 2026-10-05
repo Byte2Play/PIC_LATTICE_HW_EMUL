@@ -5,7 +5,7 @@
 Design Information
 ------------------
 
-Command line:   map -a MachXO3L -p LCMXO3L-6900C -t CABGA256 -s 5 -oc Commercial
+Command line:   map -a MachXO3L -p LCMXO3L-6900C -t CABGA256 -s 6 -oc Commercial
      BIT_PROCESSOR_impl_1.ngd -o BIT_PROCESSOR_impl_1_map.ncd -pr
      BIT_PROCESSOR_impl_1.prf -mp BIT_PROCESSOR_impl_1.mrp -lpf
      D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/BIT_PROCESSOR_impl_1.lpf
@@ -13,27 +13,27 @@ Command line:   map -a MachXO3L -p LCMXO3L-6900C -t CABGA256 -s 5 -oc Commercial
      -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO3L-6900CCABGA256
-Target Performance:   5
+Target Performance:   6
 Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  10/03/26  23:06:39
+Mapped on:  10/04/26  21:28:16
 
 Design Summary
 --------------
 
-   Number of registers:     45 out of  7485 (1%)
-      PFU registers:           45 out of  6864 (1%)
+   Number of registers:     47 out of  7485 (1%)
+      PFU registers:           47 out of  6864 (1%)
       PIO registers:            0 out of   621 (0%)
-   Number of SLICEs:        39 out of  3432 (1%)
-      SLICEs as Logic/ROM:     39 out of  3432 (1%)
-      SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:         14 out of  3432 (0%)
-   Number of LUT4s:         69 out of  6864 (1%)
-      Number used as logic LUTs:         41
-      Number used as distributed RAM:     0
-      Number used as ripple logic:       28
+   Number of SLICEs:       118 out of  3432 (3%)
+      SLICEs as Logic/ROM:     70 out of  3432 (2%)
+      SLICEs as RAM:           48 out of  2574 (2%)
+      SLICEs as Carry:         16 out of  3432 (0%)
+   Number of LUT4s:        235 out of  6864 (3%)
+      Number used as logic LUTs:        107
+      Number used as distributed RAM:    96
+      Number used as ripple logic:       32
       Number used as shift registers:     0
    Number of PIO sites used: 9 + 4(JTAG) out of 207 (6%)
-   Number of block RAMs:  0 out of 26 (0%)
+   Number of block RAMs:  1 out of 26 (4%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
    JTAG used :       No
@@ -57,52 +57,53 @@ Design Summary
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  1
-     Net clk: 30 loads, 30 rising, 0 falling (Driver: u_osc )
-   Number of Clock Enables:  2
+   Number of clocks:  2
+     Net clk_osc: 26 loads, 26 rising, 0 falling (Driver: u_osc )
+     Net clk_cpu: 32 loads, 32 rising, 0 falling (Driver: u_clk_div/clk_out_12 )
 
                                     Page 1
 
 
 
 
-Design:  top                                           Date:  10/03/26  23:06:39
+Design:  top                                           Date:  10/04/26  21:28:16
 
 Design Summary (cont)
 ---------------------
-     Net clk_enable_20: 4 loads, 4 LSLICEs
-     Net clk_enable_24: 14 loads, 14 LSLICEs
-   Number of LSRs:  6
-     Net n645: 11 loads, 11 LSLICEs
-     Net n695: 4 loads, 4 LSLICEs
-     Net n649: 1 loads, 1 LSLICEs
-     Net n564: 3 loads, 3 LSLICEs
-     Net n694: 4 loads, 4 LSLICEs
-     Net n872: 1 loads, 1 LSLICEs
+     
+   Number of Clock Enables:  3
+     Net clk_osc_enable_26: 4 loads, 4 LSLICEs
+     Net clk_osc_enable_12: 6 loads, 5 LSLICEs
+     Net clk_osc_enable_19: 4 loads, 4 LSLICEs
+   Number of LSRs:  2
+     Net n3558: 11 loads, 11 LSLICEs
+     Net n3324: 5 loads, 5 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n645: 18 loads
-     Net clk_enable_24: 15 loads
-     Net pc_counter_2: 11 loads
-     Net pc_counter_4: 11 loads
-     Net pc_counter_1: 10 loads
-     Net pc_counter_3: 10 loads
-     Net clk_out: 7 loads
-     Net n2: 5 loads
-     Net pc_counter_0: 5 loads
-     Net clk_enable_20: 4 loads
+     Net instruction_2: 94 loads
+     Net instruction_0: 93 loads
+     Net instruction_1: 84 loads
+     Net instruction_3: 84 loads
+     Net instruction_4: 43 loads
+     Net instruction_5: 27 loads
+     Net instruction_6: 21 loads
+     Net n3558: 16 loads
+     Net w_out_0: 10 loads
+     Net w_out_1: 10 loads
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  1
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
-   No errors or warnings present.
+WARNING - map: D:/ADELSOFT/LATTICE/projects/bit_processor/BIT_PROCESSOR.lpf(18):
+     Semantic error in "FREQUENCY NET "clk" 12.090000 MHz ;": clk matches no
+     clock nets in the design.  This preference has been disabled.
 
 IO (PIO) Attributes
 -------------------
@@ -113,48 +114,161 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | led[7]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| rst_n               | INPUT     | LVCMOS33  |            |
+| led[6]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led[0]              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| led[1]              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| led[2]              | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| led[3]              | OUTPUT    | LVCMOS33  |            |
+| led[5]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | led[4]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led[5]              | OUTPUT    | LVCMOS33  |            |
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 2
 
 
 
 
-Design:  top                                           Date:  10/03/26  23:06:39
+Design:  top                                           Date:  10/04/26  21:28:16
 
 IO (PIO) Attributes (cont)
 --------------------------
+| led[0]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led[6]              | OUTPUT    | LVCMOS33  |            |
+| rst_n               | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 Removed logic
 -------------
 
-Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal u_div/cnt_59_add_4_21/S1 undriven or does not drive anything - clipped.
-Signal u_div/cnt_59_add_4_21/CO undriven or does not drive anything - clipped.
-Signal u_div/cnt_59_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal u_div/cnt_59_add_4_1/CI undriven or does not drive anything - clipped.
-Signal u_pc/add_10_5/CO undriven or does not drive anything - clipped.
 Signal u_pc/add_10_1/S0 undriven or does not drive anything - clipped.
 Signal u_pc/add_10_1/CI undriven or does not drive anything - clipped.
+Signal u_pc/add_10_9/CO undriven or does not drive anything - clipped.
+Signal u_clk_div/cnt_69_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_clk_div/cnt_69_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_clk_div/cnt_69_add_4_21/CO undriven or does not drive anything -
+     clipped.
 Block i1 was optimized away.
+Block i2 was optimized away.
+
+Memory Usage
+------------
+
+/u_ram:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR mux_31:  TYPE= PDPW8KC,  Width= 12,  Depth_R= 256,  REGMODE=
+         NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= SYNC,  GSR= DISABLED
+/u_ram/mem0:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem1:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem10:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem11:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem12:
+    EBRs: 0
+    RAM SLICEs: 3
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  10/04/26  21:28:16
+
+Memory Usage (cont)
+-------------------
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem13:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem14:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem15:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem2:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem3:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem4:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem5:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem6:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem7:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem8:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/u_ram/mem9:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  10/04/26  21:28:16
+
+Memory Usage (cont)
+-------------------
+    PFU Registers: 0
 
      
 
@@ -165,7 +279,7 @@ OSC 1:                                     Pin/Node Value
   OSC Instance Name:                                u_osc
   OSC Type:                                         OSCH
   STDBY Input:                                      NONE
-  OSC Output:                              NODE     clk
+  OSC Output:                              NODE     clk_osc
   OSC Nominal Frequency (MHz):                      12.09
 
 ASIC Components
@@ -173,13 +287,15 @@ ASIC Components
 
 Instance Name: u_osc
          Type: OSCH
+Instance Name: u_ram/mux_31
+         Type: PDPW8KC
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 59 MB
+   Peak Memory Usage: 60 MB
         
 
 
@@ -193,7 +309,23 @@ Run Time and Memory Usage
 
 
 
-                                    Page 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 5
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

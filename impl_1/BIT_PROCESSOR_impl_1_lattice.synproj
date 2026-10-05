@@ -1,7 +1,7 @@
 -a "MachXO3L"
 -d LCMXO3L-6900C
 -t CABGA256
--s 5
+-s 6
 -frequency 200
 -optimization_goal Balanced
 -bram_utilization 100
@@ -40,6 +40,9 @@
 "D:/ADELSOFT/LATTICE/projects/bit_processor/mux.v"
 "D:/ADELSOFT/LATTICE/projects/bit_processor/alu.v"
 "D:/ADELSOFT/LATTICE/projects/bit_processor/w.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/status_reg.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/ram.v"
+"D:/ADELSOFT/LATTICE/projects/bit_processor/bus_mux.v"
 -top top
 
 

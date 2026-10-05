@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 03 23:06:38 2026
+Sun Oct 04 21:28:15 2026
 
 
 Command Line:  synthesis -f BIT_PROCESSOR_impl_1_lattice.synproj -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml 
@@ -15,11 +15,11 @@ Command Line:  synthesis -f BIT_PROCESSOR_impl_1_lattice.synproj -gui -msgset D:
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
 The -a option is MachXO3L.
-The -s option is 5.
+The -s option is 6.
 The -t option is CABGA256.
 The -d option is LCMXO3L-6900C.
 Using package CABGA256.
-Using performance grade 5.
+Using performance grade 6.
                                                           
 
 ##########################################################
@@ -30,7 +30,7 @@ Using performance grade 5.
 
 ### Package : CABGA256
 
-### Speed   : 5
+### Speed   : 6
 
 ##########################################################
 
@@ -76,6 +76,9 @@ Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/decoder.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/mux.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/alu.v
 Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/w.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/status_reg.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/ram.v
+Verilog design file = D:/ADELSOFT/LATTICE/projects/bit_processor/bus_mux.v
 NGD file = BIT_PROCESSOR_impl_1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -94,21 +97,26 @@ Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/decoder.v. VER
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/mux.v. VERI-1482
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/alu.v. VERI-1482
 Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/w.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/status_reg.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/ram.v. VERI-1482
+Analyzing Verilog file d:/adelsoft/lattice/projects/bit_processor/bus_mux.v. VERI-1482
 Analyzing Verilog file D:/ADELSOFT/LATTICE/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v. VERI-1482
 Top module name (Verilog): top
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/top.v(1): " arg1="top" arg2="d:/adelsoft/lattice/projects/bit_processor/top.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="D:/ADELSOFT/LATTICE/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v(1759): " arg1="OSCH(NOM_FREQ=&quot;12.09&quot;)" arg2="D:/ADELSOFT/LATTICE/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo3l.v" arg3="1759"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/clk.v(1): " arg1="clk_div(DIV=806000)" arg2="d:/adelsoft/lattice/projects/bit_processor/clk.v" arg3="1"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/clk.v(23): " arg1="32" arg2="20" arg3="d:/adelsoft/lattice/projects/bit_processor/clk.v" arg4="23"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/clk.v(1): " arg1="clk_div(DIV=1209000)" arg2="d:/adelsoft/lattice/projects/bit_processor/clk.v" arg3="1"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/clk.v(23): " arg1="32" arg2="21" arg3="d:/adelsoft/lattice/projects/bit_processor/clk.v" arg4="23"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/pc.v(1): " arg1="pc" arg2="d:/adelsoft/lattice/projects/bit_processor/pc.v" arg3="1"  />
     <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/pc.v(21): " arg1="32" arg2="13" arg3="d:/adelsoft/lattice/projects/bit_processor/pc.v" arg4="21"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/mem.v(1): " arg1="mem" arg2="d:/adelsoft/lattice/projects/bit_processor/mem.v" arg3="1"  />
     <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/mem.v(7): " arg1="rom" arg2="d:/adelsoft/lattice/projects/bit_processor/mem.v" arg3="7"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/decoder.v(1): " arg1="decoder" arg2="d:/adelsoft/lattice/projects/bit_processor/decoder.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/mux.v(1): " arg1="mux" arg2="d:/adelsoft/lattice/projects/bit_processor/mux.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/alu.v(1): " arg1="alu" arg2="d:/adelsoft/lattice/projects/bit_processor/alu.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/w.v(1): " arg1="w" arg2="d:/adelsoft/lattice/projects/bit_processor/w.v" arg3="1"  />
-    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/top.v(87): " arg1="b[7]" arg2="d:/adelsoft/lattice/projects/bit_processor/top.v" arg3="87"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/ram.v(1): " arg1="ram" arg2="d:/adelsoft/lattice/projects/bit_processor/ram.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/bus_mux.v(1): " arg1="bus_mux" arg2="d:/adelsoft/lattice/projects/bit_processor/bus_mux.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/decoder.v(1): " arg1="decoder" arg2="d:/adelsoft/lattice/projects/bit_processor/decoder.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/alu.v(1): " arg1="alu" arg2="d:/adelsoft/lattice/projects/bit_processor/alu.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/status_reg.v(1): " arg1="status_reg" arg2="d:/adelsoft/lattice/projects/bit_processor/status_reg.v" arg3="1"  />
 Last elaborated design is top()
 Loading NGL library 'D:/ADELSOFT/LATTICE/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'D:/ADELSOFT/LATTICE/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -118,19 +126,13 @@ Loading device for application map from file 'xo3c6900.nph' in environment: D:/A
 Package Status:                     Final          Version 1.17.
 Top-level module name = top.
     <postMsg mid="35931038" type="Warning" dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/mem.v(7): " arg1="rom_original_ramnet" arg2="d:/adelsoft/lattice/projects/bit_processor/mem.v" arg3="7"  />
-    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/mux.v(5): " arg1="\u_mux_to_alu/b[7]" arg2="d:/adelsoft/lattice/projects/bit_processor/mux.v" arg3="5"  />
-######## Missing driver on net \u_mux_to_alu/b[7]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[6]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[5]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[4]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[3]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[2]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[1]. Patching with GND.
-######## Missing driver on net \u_mux_to_alu/b[0]. Patching with GND.
+    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="d:/adelsoft/lattice/projects/bit_processor/status_reg.v(38): " arg1="\u_status_reg/dc_reg_11" arg2="d:/adelsoft/lattice/projects/bit_processor/status_reg.v" arg3="38"  />
 
 
 
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="10" arg1="\u_mem/dato"  />
+######## Found 1 RTL RAMs in the design.
+######## Mapping RTL RAM \u_ram/mem to 16 Distributed blocks in SINGLE_PORT Mode
+
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -147,24 +149,27 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-    114 blocks expanded
+    233 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file BIT_PROCESSOR_impl_1.ngd.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 45 of 7485 (0 % )
-CCU2D => 14
-FD1P3AX => 9
-FD1P3IX => 14
-FD1P3JX => 1
+Number of register bits => 47 of 7485 (0 % )
+CCU2D => 16
+FD1P3AX => 16
+FD1P3IX => 9
 FD1S3AX => 1
-FD1S3IX => 20
+FD1S3IX => 21
 GSR => 1
 IB => 1
-LUT4 => 41
+L6MUX21 => 8
+LUT4 => 107
 OB => 8
 OSCH => 1
+PDPW8KC => 1
+PFUMX => 24
+SPR16X4C => 16
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -173,24 +178,27 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 1
-  Net : clk, loads : 45
+Number of Clocks: 2
+  Net : clk_osc, loads : 48
+  Net : u_clk_div/clk_cpu, loads : 21
 Clock Enable Nets
-Number of Clock Enables: 2
-Top 2 highest fanout Clock Enables:
-  Net : clk_enable_24, loads : 3
+Number of Clock Enables: 3
+Top 3 highest fanout Clock Enables:
+  Net : clk_osc_enable_12, loads : 2
+  Net : clk_osc_enable_26, loads : 1
+  Net : clk_osc_enable_19, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : u_div/n645, loads : 26
-  Net : clk_enable_24, loads : 17
-  Net : u_pc/pc_counter_4, loads : 10
-  Net : u_pc/pc_counter_2, loads : 10
-  Net : u_pc/pc_counter_3, loads : 9
-  Net : u_pc/pc_counter_1, loads : 9
-  Net : u_decoder/clk_enable_20, loads : 7
-  Net : u_div/clk_out, loads : 6
-  Net : n564, loads : 5
-  Net : u_pc/pc_counter_0, loads : 4
+  Net : u_ram/instruction_4, loads : 42
+  Net : u_ram/instruction_2, loads : 29
+  Net : u_ram/instruction_0, loads : 28
+  Net : u_ram/instruction_5, loads : 26
+  Net : u_clk_div/n3558, loads : 25
+  Net : u_ram/instruction_6, loads : 20
+  Net : u_ram/instruction_3, loads : 19
+  Net : u_ram/instruction_1, loads : 19
+  Net : clk_osc_enable_12, loads : 10
+  Net : u_decoder/n4261, loads : 10
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -200,7 +208,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk]                     |  200.000 MHz|  100.190 MHz|     6 *
+clk0 [get_nets clk_osc]                 |  200.000 MHz|   97.163 MHz|     9 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -208,13 +216,13 @@ clk0 [get_nets clk]                     |  200.000 MHz|  100.190 MHz|     6 *
 1 constraints not met.
 
 
-Peak Memory Usage: 62.059  MB
+Peak Memory Usage: 66.090  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.625  secs
+Elapsed CPU time for LSE flow : 0.797  secs
 --------------------------------------------------------------
 
-map -a "MachXO3L" -p LCMXO3L-6900C -t CABGA256 -s 5 -oc Commercial   "BIT_PROCESSOR_impl_1.ngd" -o "BIT_PROCESSOR_impl_1_map.ncd" -pr "BIT_PROCESSOR_impl_1.prf" -mp "BIT_PROCESSOR_impl_1.mrp" -lpf "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/BIT_PROCESSOR_impl_1.lpf" -lpf "D:/ADELSOFT/LATTICE/projects/bit_processor/BIT_PROCESSOR.lpf"  -c 0           
+map -a "MachXO3L" -p LCMXO3L-6900C -t CABGA256 -s 6 -oc Commercial   "BIT_PROCESSOR_impl_1.ngd" -o "BIT_PROCESSOR_impl_1_map.ncd" -pr "BIT_PROCESSOR_impl_1.prf" -mp "BIT_PROCESSOR_impl_1.mrp" -lpf "D:/ADELSOFT/LATTICE/projects/bit_processor/impl_1/BIT_PROCESSOR_impl_1.lpf" -lpf "D:/ADELSOFT/LATTICE/projects/bit_processor/BIT_PROCESSOR.lpf"  -c 0           
 map:  version Diamond (64-bit) 3.14.0.75.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -227,14 +235,15 @@ Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
    Pictype="CABGA256"
 
-   Picspeed=5
+   Picspeed=6
 
    Remove unused logic
 
    Do not produce over sized NCDs.
 
-Part used: LCMXO3L-6900CCABGA256, Performance used: 5.
+Part used: LCMXO3L-6900CCABGA256, Performance used: 6.
 
+    <postMsg mid="1100523" type="Warning" dynamic="2" navigation="2" arg0="D:/ADELSOFT/LATTICE/projects/bit_processor/BIT_PROCESSOR.lpf(18): Semantic error in &quot;FREQUENCY NET &quot;clk&quot; 12.090000 MHz ;&quot;: " arg1="clk matches no clock nets in the design. " arg2="D:/ADELSOFT/LATTICE/projects/bit_processor/BIT_PROCESSOR.lpf" arg3="18"  />
 Loading device for application map from file 'xo3c6900.nph' in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 
@@ -248,20 +257,20 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:     45 out of  7485 (1%)
-      PFU registers:           45 out of  6864 (1%)
+   Number of registers:     47 out of  7485 (1%)
+      PFU registers:           47 out of  6864 (1%)
       PIO registers:            0 out of   621 (0%)
-   Number of SLICEs:        39 out of  3432 (1%)
-      SLICEs as Logic/ROM:     39 out of  3432 (1%)
-      SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:         14 out of  3432 (0%)
-   Number of LUT4s:         69 out of  6864 (1%)
-      Number used as logic LUTs:         41
-      Number used as distributed RAM:     0
-      Number used as ripple logic:       28
+   Number of SLICEs:       118 out of  3432 (3%)
+      SLICEs as Logic/ROM:     70 out of  3432 (2%)
+      SLICEs as RAM:           48 out of  2574 (2%)
+      SLICEs as Carry:         16 out of  3432 (0%)
+   Number of LUT4s:        235 out of  6864 (3%)
+      Number used as logic LUTs:        107
+      Number used as distributed RAM:    96
+      Number used as ripple logic:       32
       Number used as shift registers:     0
    Number of PIO sites used: 9 + 4(JTAG) out of 207 (6%)
-   Number of block RAMs:  0 out of 26 (0%)
+   Number of block RAMs:  1 out of 26 (4%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
    JTAG used :       No
@@ -283,40 +292,38 @@ Design Summary:
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
-   Number of clocks:  1
-     Net clk: 30 loads, 30 rising, 0 falling (Driver: u_osc )
-   Number of Clock Enables:  2
-     Net clk_enable_20: 4 loads, 4 LSLICEs
-     Net clk_enable_24: 14 loads, 14 LSLICEs
-   Number of LSRs:  6
-     Net n645: 11 loads, 11 LSLICEs
-     Net n695: 4 loads, 4 LSLICEs
-     Net n649: 1 loads, 1 LSLICEs
-     Net n564: 3 loads, 3 LSLICEs
-     Net n694: 4 loads, 4 LSLICEs
-     Net n872: 1 loads, 1 LSLICEs
+   Number of clocks:  2
+     Net clk_osc: 26 loads, 26 rising, 0 falling (Driver: u_osc )
+     Net clk_cpu: 32 loads, 32 rising, 0 falling (Driver: u_clk_div/clk_out_12 )
+   Number of Clock Enables:  3
+     Net clk_osc_enable_26: 4 loads, 4 LSLICEs
+     Net clk_osc_enable_12: 6 loads, 5 LSLICEs
+     Net clk_osc_enable_19: 4 loads, 4 LSLICEs
+   Number of LSRs:  2
+     Net n3558: 11 loads, 11 LSLICEs
+     Net n3324: 5 loads, 5 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net n645: 18 loads
-     Net clk_enable_24: 15 loads
-     Net pc_counter_2: 11 loads
-     Net pc_counter_4: 11 loads
-     Net pc_counter_1: 10 loads
-     Net pc_counter_3: 10 loads
-     Net clk_out: 7 loads
-     Net n2: 5 loads
-     Net pc_counter_0: 5 loads
-     Net clk_enable_20: 4 loads
+     Net instruction_2: 94 loads
+     Net instruction_0: 93 loads
+     Net instruction_1: 84 loads
+     Net instruction_3: 84 loads
+     Net instruction_4: 43 loads
+     Net instruction_5: 27 loads
+     Net instruction_6: 21 loads
+     Net n3558: 16 loads
+     Net w_out_0: 10 loads
+     Net w_out_1: 10 loads
  
 
-   Number of warnings:  0
+   Number of warnings:  1
    Number of errors:    0
 
 
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 59 MB
+Peak Memory Usage: 60 MB
 
 Dumping design to file BIT_PROCESSOR_impl_1_map.ncd.
 
@@ -331,7 +338,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "BIT_PROCESSOR_impl_1_map.ncd"
-Sat Oct 03 23:06:40 2026
+Sun Oct 04 21:28:17 2026
 
 PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 BIT_PROCESSOR_impl_1_map.ncd BIT_PROCESSOR_impl_1.dir/5_1.ncd BIT_PROCESSOR_impl_1.prf
@@ -345,7 +352,7 @@ NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO3L-6900C
 Package:     CABGA256
-Performance: 5
+Performance: 6
 Loading device for application par from file 'xo3c6900.nph' in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 Performance Hardware Data Status:   Final          Version 37.5.
@@ -358,40 +365,43 @@ Device utilization summary:
    PIO (prelim)    9+4(JTAG)/336     4% used
                    9+4(JTAG)/207     6% bonded
 
-   SLICE             39/3432          1% used
+   SLICE            118/3432          3% used
 
    OSC                1/1           100% used
+   EBR                1/26            3% used
 
 
-Number of Signals: 125
-Number of Connections: 279
+INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
+INFO: Design contains pre-loadable EBR during configuration that has a requirement: Since the GSR is disabled for the EBR, make sure write enable and chip enable are inactive during wake-up, so that the pre-loaded initialization values will not be corrupted during wake-up state.
+Number of Signals: 388
+Number of Connections: 1174
     <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
 
 Pin Constraint Summary:
    9 out of 9 pins locked (100% locked).
 
-The following 1 signal is selected to use the primary clock routing resources:
-    clk (driver: u_osc, clk load #: 30)
+The following 2 signals are selected to use the primary clock routing resources:
+    clk_cpu (driver: SLICE_64, clk load #: 32)
+    clk_osc (driver: u_osc, clk load #: 26)
 
 
-The following 2 signals are selected to use the secondary clock routing resources:
-    clk_enable_24 (driver: SLICE_34, clk load #: 0, sr load #: 0, ce load #: 14)
-    n645 (driver: SLICE_33, clk load #: 0, sr load #: 11, ce load #: 0)
+The following 1 signal is selected to use the secondary clock routing resources:
+    n3558 (driver: SLICE_108, clk load #: 0, sr load #: 11, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-
+..........
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 16232.
-Finished Placer Phase 1.  REAL time: 3 secs 
+...................
+Placer score = 42996.
+Finished Placer Phase 1.  REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  16161
-Finished Placer Phase 2.  REAL time: 3 secs 
+Placer score =  42891
+Finished Placer Phase 2.  REAL time: 4 secs 
 
 
 ------------------ Clock Report ------------------
@@ -403,12 +413,12 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "clk" from OSC on comp "u_osc" on site "OSC", clk load = 30
-  SECONDARY "clk_enable_24" from F0 on comp "SLICE_34" on site "R14C20D", clk load = 0, ce load = 14, sr load = 0
-  SECONDARY "n645" from F1 on comp "SLICE_33" on site "R14C20B", clk load = 0, ce load = 0, sr load = 11
+  PRIMARY "clk_cpu" from Q0 on comp "SLICE_64" on site "R2C19D", clk load = 32
+  PRIMARY "clk_osc" from OSC on comp "u_osc" on site "OSC", clk load = 26
+  SECONDARY "n3558" from F1 on comp "SLICE_108" on site "R21C18A", clk load = 0, ce load = 0, sr load = 11
 
-  PRIMARY  : 1 out of 8 (12%)
-  SECONDARY: 2 out of 8 (25%)
+  PRIMARY  : 2 out of 8 (25%)
+  SECONDARY: 1 out of 8 (12%)
 
 Edge Clocks:
   No edge clock selected.
@@ -434,16 +444,16 @@ I/O Bank Usage Summary:
 | 5        | 0 / 20 (  0%) | -          | -         |
 +----------+---------------+------------+-----------+
 
-Total placer CPU time: 2 secs 
+Total placer CPU time: 4 secs 
 
 Dumping design to file BIT_PROCESSOR_impl_1.dir/5_1.ncd.
 
-0 connections routed; 279 unrouted.
+0 connections routed; 1174 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 4 secs 
+Completed router resource preassignment. Real time: 5 secs 
 
-Start NBR router at 23:06:44 10/03/26
+Start NBR router at 21:28:22 10/04/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -458,35 +468,32 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 23:06:44 10/03/26
+Start NBR special constraint process at 21:28:22 10/04/26
 
-Start NBR section for initial routing at 23:06:44 10/03/26
+Start NBR section for initial routing at 21:28:22 10/04/26
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 74.081ns/0.000ns; real time: 4 secs 
+25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 68.642ns/0.000ns; real time: 5 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 23:06:44 10/03/26
+Start NBR section for normal routing at 21:28:22 10/04/26
 Level 4, iteration 1
 3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack<setup>: 68.630ns/0.000ns; real time: 6 secs 
 Level 4, iteration 2
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 73.974ns/0.000ns; real time: 4 secs 
-Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack<setup>: 68.630ns/0.000ns; real time: 6 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 23:06:44 10/03/26
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:28:23 10/04/26
 
-Start NBR section for re-routing at 23:06:44 10/03/26
+Start NBR section for re-routing at 21:28:23 10/04/26
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack<setup>: 68.630ns/0.000ns; real time: 6 secs 
 
-Start NBR section for post-routing at 23:06:44 10/03/26
+Start NBR section for post-routing at 21:28:23 10/04/26
 
 End NBR router with 0 unrouted connection
 
@@ -494,17 +501,17 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 73.974ns
+  Estimated worst slack<setup> : 68.630ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 4 secs 
-Total REAL time: 4 secs 
+Total CPU time 6 secs 
+Total REAL time: 6 secs 
 Completely routed.
-End of route.  279 routed (100.00%); 0 unrouted.
+End of route.  1174 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -515,14 +522,14 @@ Dumping design to file BIT_PROCESSOR_impl_1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 73.974
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 68.630
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.379
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.182
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 4 secs 
-Total REAL time to completion: 4 secs 
+Total CPU  time to completion: 6 secs 
+Total REAL time to completion: 6 secs 
 
 par done!
 
@@ -551,7 +558,7 @@ NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO3L-6900C
 Package:     CABGA256
-Performance: 5
+Performance: 6
 Loading device for application trce from file 'xo3c6900.nph' in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 Performance Hardware Data Status:   Final          Version 37.5.
@@ -559,7 +566,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
-Sat Oct 03 23:06:45 2026
+Sun Oct 04 21:28:24 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -569,10 +576,10 @@ Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BIT_PROCESSOR_impl_1.twr -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml BIT_PROCESSOR_impl_1.ncd BIT_PROCESSOR_impl_1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o BIT_PROCESSOR_impl_1.twr -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml BIT_PROCESSOR_impl_1.ncd BIT_PROCESSOR_impl_1.prf 
 Design file:     bit_processor_impl_1.ncd
 Preference file: bit_processor_impl_1.prf
-Device,speed:    LCMXO3L-6900C,5
+Device,speed:    LCMXO3L-6900C,6
 Report level:    verbose report, limited to 10 items per preference
 --------------------------------------------------------------------------------
 
@@ -588,11 +595,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1213 paths, 1 nets, and 278 connections (99.64% coverage)
+Constraints cover 1890 paths, 1 nets, and 1173 connections (99.91% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
-Sat Oct 03 23:06:45 2026
+Sun Oct 04 21:28:24 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -602,7 +609,7 @@ Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BIT_PROCESSOR_impl_1.twr -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml BIT_PROCESSOR_impl_1.ncd BIT_PROCESSOR_impl_1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o BIT_PROCESSOR_impl_1.twr -gui -msgset D:/ADELSOFT/LATTICE/projects/bit_processor/promote.xml BIT_PROCESSOR_impl_1.ncd BIT_PROCESSOR_impl_1.prf 
 Design file:     bit_processor_impl_1.ncd
 Preference file: bit_processor_impl_1.prf
 Device,speed:    LCMXO3L-6900C,m
@@ -621,7 +628,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1213 paths, 1 nets, and 278 connections (99.64% coverage)
+Constraints cover 1890 paths, 1 nets, and 1173 connections (99.91% coverage)
 
 
 
@@ -637,7 +644,7 @@ Cumulative negative slack: 0 (0+0)
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 68 MB
+Peak Memory Usage: 69 MB
 
 
 tmcheck -par "BIT_PROCESSOR_impl_1.par" 
@@ -659,12 +666,14 @@ NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO3L-6900C
 Package:     CABGA256
-Performance: 5
+Performance: 6
 Loading device for application Bitgen from file 'xo3c6900.nph' in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 Performance Hardware Data Status:   Final          Version 37.5.
 
 Running DRC.
+INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
+INFO: Design contains pre-loadable EBR during configuration that has a requirement: Since the GSR is disabled for the EBR, make sure write enable and chip enable are inactive during wake-up, so that the pre-loaded initialization values will not be corrupted during wake-up state.
 DRC detected 0 errors and 0 warnings.
 Reading Preference File from BIT_PROCESSOR_impl_1.prf.
     <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00a.acd ###"  />
@@ -720,7 +729,7 @@ Bitstream Status: Final           Version 1.95.
  
 Saving bit stream in "BIT_PROCESSOR_impl_1.bit".
 Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total REAL Time: 2 secs 
 Peak Memory Usage: 290 MB
 
 tmcheck -par "BIT_PROCESSOR_impl_1.par" 
@@ -742,12 +751,14 @@ NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO3L-6900C
 Package:     CABGA256
-Performance: 5
+Performance: 6
 Loading device for application Bitgen from file 'xo3c6900.nph' in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 Performance Hardware Data Status:   Final          Version 37.5.
 
 Running DRC.
+INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
+INFO: Design contains pre-loadable EBR during configuration that has a requirement: Since the GSR is disabled for the EBR, make sure write enable and chip enable are inactive during wake-up, so that the pre-loaded initialization values will not be corrupted during wake-up state.
 DRC detected 0 errors and 0 warnings.
 Reading Preference File from BIT_PROCESSOR_impl_1.prf.
     <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00a.acd ###"  />
@@ -805,9 +816,9 @@ Saving bit stream in "BIT_PROCESSOR_impl_1.jed".
 =========
 Padding summary
 =========
-Padded 1236864 bits for this design
+Padded 1214080 bits for this design
 
 
 Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total REAL Time: 2 secs 
 Peak Memory Usage: 290 MB

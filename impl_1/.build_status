@@ -5,40 +5,39 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1791090408"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1791090411"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1791170907"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1791170909"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1791090400">
-            <Task name="Map" build_result="2" update_result="0" update_time="1791090400"/>
+        <Milestone name="Map" build_result="2" build_time="1791170897">
+            <Task name="Map" build_result="2" update_result="0" update_time="1791170897"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1791090404">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1791090404"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1791090405"/>
+        <Milestone name="PAR" build_result="2" build_time="1791170903">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1791170903"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1791170904"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1791090399">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1791090399"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1791090398"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1791170896">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1791170896"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1791170895"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1791090264"/>
-            <Task name="BKM" build_result="0" update_result="2" update_time="1791090264"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1791170651"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1791170651"/>
             <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/BIT_PROCESSOR_impl_1_map.vdb" last_build_time="1791090400" last_build_size="42243"/>
-        <Report name="BIT_PROCESSOR_impl_1.bgn" last_build_time="1791090411" last_build_size="4463"/>
-        <Report name="BIT_PROCESSOR_impl_1.bit" last_build_time="1791090408" last_build_size="25867"/>
-        <Report name="BIT_PROCESSOR_impl_1.jed" last_build_time="1791090411" last_build_size="1464863"/>
-        <Report name="BIT_PROCESSOR_impl_1.lsedata" last_build_time="1791090398" last_build_size="68213"/>
-        <Report name="BIT_PROCESSOR_impl_1.ncd" last_build_time="1791090404" last_build_size="82060"/>
-        <Report name="BIT_PROCESSOR_impl_1.ngd" last_build_time="1791090399" last_build_size="69974"/>
-        <Report name="BIT_PROCESSOR_impl_1.twr" last_build_time="1791090405" last_build_size="47084"/>
-        <Report name="BIT_PROCESSOR_impl_1_map.ncd" last_build_time="1791090399" last_build_size="56438"/>
+        <Report name=".vdbs/BIT_PROCESSOR_impl_1_map.vdb" last_build_time="1791170897" last_build_size="64662"/>
+        <Report name="BIT_PROCESSOR_impl_1.bgn" last_build_time="1791170909" last_build_size="5012"/>
+        <Report name="BIT_PROCESSOR_impl_1.bit" last_build_time="1791170906" last_build_size="28710"/>
+        <Report name="BIT_PROCESSOR_impl_1.jed" last_build_time="1791170909" last_build_size="1464896"/>
+        <Report name="BIT_PROCESSOR_impl_1.lsedata" last_build_time="1791170895" last_build_size="108473"/>
+        <Report name="BIT_PROCESSOR_impl_1.ncd" last_build_time="1791170903" last_build_size="252366"/>
+        <Report name="BIT_PROCESSOR_impl_1.ngd" last_build_time="1791170895" last_build_size="164575"/>
+        <Report name="BIT_PROCESSOR_impl_1.twr" last_build_time="1791170904" last_build_size="49731"/>
+        <Report name="BIT_PROCESSOR_impl_1_map.ncd" last_build_time="1791170896" last_build_size="169493"/>
     </Strategy>
 </BuildStatus>
-                   

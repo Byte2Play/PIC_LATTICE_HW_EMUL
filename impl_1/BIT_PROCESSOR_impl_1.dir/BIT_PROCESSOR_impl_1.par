@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 03 23:06:40 2026
+Sun Oct 04 21:28:17 2026
 
 D:/ADELSOFT/LATTICE/ispfpga\bin\nt64\par -f BIT_PROCESSOR_impl_1.p2t
 BIT_PROCESSOR_impl_1_map.ncd BIT_PROCESSOR_impl_1.dir BIT_PROCESSOR_impl_1.prf
@@ -16,11 +16,11 @@ Preference file: BIT_PROCESSOR_impl_1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            73.974       0            0.379        0            04           Completed
+5_1   *      0            68.630       0            0.182        0            06           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 4 secs 
+Total (real) run time for 1-seed: 6 secs 
 
 par done!
 

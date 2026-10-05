@@ -12,7 +12,7 @@ Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Oct 03 23:06:40 2026
+Sun Oct 04 21:28:17 2026
 
 D:/ADELSOFT/LATTICE/ispfpga\bin\nt64\par -f BIT_PROCESSOR_impl_1.p2t
 BIT_PROCESSOR_impl_1_map.ncd BIT_PROCESSOR_impl_1.dir BIT_PROCESSOR_impl_1.prf
@@ -25,17 +25,17 @@ Preference file: BIT_PROCESSOR_impl_1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            73.974       0            0.379        0            04           Completed
+5_1   *      0            68.630       0            0.182        0            06           Completed
 * : Design saved.
 
-Total (real) run time for 1-seed: 4 secs 
+Total (real) run time for 1-seed: 6 secs 
 
 par done!
 
 Note: user must run &apos;Trace&apos; for timing closure signoff.
 
 Lattice Place and Route Report for Design &quot;BIT_PROCESSOR_impl_1_map.ncd&quot;
-Sat Oct 03 23:06:40 2026
+Sun Oct 04 21:28:17 2026
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -51,7 +51,7 @@ NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO3L-6900C
 Package:     CABGA256
-Performance: 5
+Performance: 6
 Loading device for application par from file &apos;xo3c6900.nph&apos; in environment: D:/ADELSOFT/LATTICE/ispfpga.
 Package Status:                     Final          Version 1.17.
 Performance Hardware Data Status:   Final          Version 37.5.
@@ -65,40 +65,43 @@ Ignore Preference Error(s):  True
    PIO (prelim)    9+4(JTAG)/336     4% used
                    9+4(JTAG)/207     6% bonded
 
-   SLICE             39/3432          1% used
+   SLICE            118/3432          3% used
 
    OSC                1/1           100% used
+   EBR                1/26            3% used
 
 
-Number of Signals: 125
-Number of Connections: 279
+INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific data sheet for additional details.
+INFO: Design contains pre-loadable EBR during configuration that has a requirement: Since the GSR is disabled for the EBR, make sure write enable and chip enable are inactive during wake-up, so that the pre-loaded initialization values will not be corrupted during wake-up state.
+Number of Signals: 388
+Number of Connections: 1174
 WARNING - par: The SN pin is not available for use as a general purpose I/O pin when the SLAVE_SPI_PORT attribute is enabled.  The SN pin should be tied high with an external pull-up if you are not using the Slave SPI port for configuration.
 
 Pin Constraint Summary:
    9 out of 9 pins locked (100% locked).
 
-The following 1 signal is selected to use the primary clock routing resources:
-    clk (driver: u_osc, clk load #: 30)
+The following 2 signals are selected to use the primary clock routing resources:
+    clk_cpu (driver: SLICE_64, clk load #: 32)
+    clk_osc (driver: u_osc, clk load #: 26)
 
 
-The following 2 signals are selected to use the secondary clock routing resources:
-    clk_enable_24 (driver: SLICE_34, clk load #: 0, sr load #: 0, ce load #: 14)
-    n645 (driver: SLICE_33, clk load #: 0, sr load #: 11, ce load #: 0)
+The following 1 signal is selected to use the secondary clock routing resources:
+    n3558 (driver: SLICE_108, clk load #: 0, sr load #: 11, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-
+..........
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 16232.
-Finished Placer Phase 1.  REAL time: 3 secs 
+...................
+Placer score = 42996.
+Finished Placer Phase 1.  REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  16161
-Finished Placer Phase 2.  REAL time: 3 secs 
+Placer score =  42891
+Finished Placer Phase 2.  REAL time: 4 secs 
 
 
 
@@ -111,12 +114,12 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY &quot;clk&quot; from OSC on comp &quot;u_osc&quot; on site &quot;OSC&quot;, clk load = 30
-  SECONDARY &quot;clk_enable_24&quot; from F0 on comp &quot;SLICE_34&quot; on site &quot;R14C20D&quot;, clk load = 0, ce load = 14, sr load = 0
-  SECONDARY &quot;n645&quot; from F1 on comp &quot;SLICE_33&quot; on site &quot;R14C20B&quot;, clk load = 0, ce load = 0, sr load = 11
+  PRIMARY &quot;clk_cpu&quot; from Q0 on comp &quot;SLICE_64&quot; on site &quot;R2C19D&quot;, clk load = 32
+  PRIMARY &quot;clk_osc&quot; from OSC on comp &quot;u_osc&quot; on site &quot;OSC&quot;, clk load = 26
+  SECONDARY &quot;n3558&quot; from F1 on comp &quot;SLICE_108&quot; on site &quot;R21C18A&quot;, clk load = 0, ce load = 0, sr load = 11
 
-  PRIMARY  : 1 out of 8 (12%)
-  SECONDARY: 2 out of 8 (25%)
+  PRIMARY  : 2 out of 8 (25%)
+  SECONDARY: 1 out of 8 (12%)
 
 Edge Clocks:
   No edge clock selected.
@@ -142,16 +145,16 @@ I/O Bank Usage Summary:
 | 5        | 0 / 20 (  0%) | -          | -         |
 +----------+---------------+------------+-----------+
 
-Total placer CPU time: 2 secs 
+Total placer CPU time: 4 secs 
 
 Dumping design to file BIT_PROCESSOR_impl_1.dir/5_1.ncd.
 
-0 connections routed; 279 unrouted.
+0 connections routed; 1174 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 4 secs 
+Completed router resource preassignment. Real time: 5 secs 
 
-Start NBR router at 23:06:44 10/03/26
+Start NBR router at 21:28:22 10/04/26
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -166,35 +169,32 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 23:06:44 10/03/26
+Start NBR special constraint process at 21:28:22 10/04/26
 
-Start NBR section for initial routing at 23:06:44 10/03/26
+Start NBR section for initial routing at 21:28:22 10/04/26
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 74.081ns/0.000ns; real time: 4 secs 
+25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 68.642ns/0.000ns; real time: 5 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 23:06:44 10/03/26
+Start NBR section for normal routing at 21:28:22 10/04/26
 Level 4, iteration 1
 3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 68.630ns/0.000ns; real time: 6 secs 
 Level 4, iteration 2
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 73.974ns/0.000ns; real time: 4 secs 
-Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 68.630ns/0.000ns; real time: 6 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 23:06:44 10/03/26
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:28:23 10/04/26
 
-Start NBR section for re-routing at 23:06:44 10/03/26
+Start NBR section for re-routing at 21:28:23 10/04/26
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 73.974ns/0.000ns; real time: 4 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 68.630ns/0.000ns; real time: 6 secs 
 
-Start NBR section for post-routing at 23:06:44 10/03/26
+Start NBR section for post-routing at 21:28:23 10/04/26
 
 End NBR router with 0 unrouted connection
 
@@ -202,17 +202,17 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack&lt;setup&gt; : 73.974ns
+  Estimated worst slack&lt;setup&gt; : 68.630ns
   Timing score&lt;setup&gt; : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 4 secs 
-Total REAL time: 4 secs 
+Total CPU time 6 secs 
+Total REAL time: 6 secs 
 Completely routed.
-End of route.  279 routed (100.00%); 0 unrouted.
+End of route.  1174 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -226,14 +226,14 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 73.974
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 68.630
 PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 0.000
-PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.379
+PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.182
 PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 4 secs 
-Total REAL time to completion: 4 secs 
+Total CPU  time to completion: 6 secs 
+Total REAL time to completion: 6 secs 
 
 par done!
 

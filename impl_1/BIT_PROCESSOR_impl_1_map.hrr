@@ -3,54 +3,82 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      39.00        100.0
-                                  LUT4	      41.00        100.0
+                                  SLIC	     118.00        100.0
+                                  LUT4	     107.00        100.0
+                               DISTRAM	      48.00        100.0
                                  IOBUF	          9        100.0
-                                PFUREG	         45        100.0
-                                RIPPLE	         14        100.0
+                                PFUREG	         47        100.0
+                                RIPPLE	         16        100.0
+                                   EBR	          1        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                     w	          1         5.1
-                                    pc	          1        27.4
-                                   mem	          1        13.2
-                               decoder	          1         2.1
-                   clk_div(DIV=806000)	          1        38.9
+                                     w	          1         1.7
+                                  w_U0	          1         1.7
+                                   ram	          1        54.2
+                                    pc	          1         8.2
+                                   mux	          1         1.5
+                               decoder	          1         9.1
+                               bus_mux	          1         4.9
+                  clk_div(DIV=1209000)	          1        12.6
 ---------------------------------------------------
 Report for cell w
-   Instance path: top/w
+   Instance path: top/u_w
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       2.00         5.1
-                                PFUREG	          8        17.8
----------------------------------------------------
-Report for cell pc
-   Instance path: top/u_pc
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      10.67        27.4
-                                  LUT4	      16.00        39.0
-                                PFUREG	          5        11.1
-                                RIPPLE	          3        21.4
----------------------------------------------------
-Report for cell mem
-   Instance path: top/u_mem
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	       5.17        13.2
-                                PFUREG	         11        24.4
----------------------------------------------------
-Report for cell clk_div(DIV=806000)
-   Instance path: top/u_div
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      15.17        38.9
-                                  LUT4	       8.00        19.5
-                                PFUREG	         21        46.7
-                                RIPPLE	         11        78.6
+                                  SLIC	       2.00         1.7
+                                PFUREG	          8        17.0
 ---------------------------------------------------
 Report for cell decoder
    Instance path: top/u_decoder
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       0.83         2.1
-                                  LUT4	       2.00         4.9
+                                  SLIC	      10.75         9.1
+                                  LUT4	      22.33        20.9
+---------------------------------------------------
+Report for cell ram
+   Instance path: top/u_ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      64.00        54.2
+                                  LUT4	      32.00        29.9
+                               DISTRAM	      48.00        100.0
+                                   EBR	          1        100.0
+---------------------------------------------------
+Report for cell mux
+   Instance path: top/u_mux_alu_b
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.75         1.5
+                                  LUT4	       7.00         6.5
+---------------------------------------------------
+Report for cell w_U0
+   Instance path: top/u_fsr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         1.7
+                                PFUREG	          8        17.0
+---------------------------------------------------
+Report for cell bus_mux
+   Instance path: top/u_bus_mux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.83         4.9
+                                  LUT4	      11.67        10.9
+---------------------------------------------------
+Report for cell clk_div(DIV=1209000)
+   Instance path: top/u_clk_div
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.92        12.6
+                                  LUT4	       8.00         7.5
+                                PFUREG	         22        46.8
+                                RIPPLE	         11        68.8
+---------------------------------------------------
+Report for cell pc
+   Instance path: top/u_pc
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.67         8.2
+                                  LUT4	       9.00         8.4
+                                PFUREG	          9        19.1
+                                RIPPLE	          5        31.3

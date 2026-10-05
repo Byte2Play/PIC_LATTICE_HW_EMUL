@@ -9,7 +9,7 @@
 <PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sat Oct 03 23:06:39 2026
+Sun Oct 04 21:28:15 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -27,113 +27,131 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk]
-            1584 items scored, 1014 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_osc]
+            2166 items scored, 1375 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 4.981ns
+Error:  The following path violates requirements by 5.292ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \u_div/cnt_59__i8  (from clk +)
-   Destination:    FD1P3AX    SP             \w/w_out_i0_i6  (to clk +)
+   Source:         PDPW8KC    CLKR           \u_ram/mux_31  (from clk_osc +)
+   Destination:    FD1P3AX    D              \u_w/w_out_i0_i0  (to clk_osc +)
 
-   Delay:                   9.722ns  (27.2% logic, 72.8% route), 6 logic levels.
+   Delay:                  10.159ns  (30.0% logic, 70.0% route), 9 logic levels.
 
  Constraint Details:
 
-      9.722ns data_path \u_div/cnt_59__i8 to \w/w_out_i0_i6 violates
+     10.159ns data_path \u_ram/mux_31 to \u_w/w_out_i0_i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 4.981ns
+      0.133ns L_S requirement (totaling 4.867ns) by 5.292ns
 
- Path Details: \u_div/cnt_59__i8 to \w/w_out_i0_i6
+ Path Details: \u_ram/mux_31 to \u_w/w_out_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \u_div/cnt_59__i8 (from clk)
-Route         2   e 1.002                                  \u_div/cnt[8]
-LUT4        ---     0.448              B to Z              \u_div/i6_4_lut
-Route         1   e 0.788                                  \u_div/n16
-LUT4        ---     0.448              D to Z              \u_div/i1_4_lut
-Route         1   e 0.788                                  \u_div/n12
-LUT4        ---     0.448              D to Z              \u_div/i557_4_lut
-Route        27   e 1.695                                  n645
-LUT4        ---     0.448              B to Z              i568_2_lut_rep_4
-Route        17   e 1.519                                  clk_enable_24
-LUT4        ---     0.448              D to Z              \u_decoder/i3_4_lut
-Route         8   e 1.287                                  clk_enable_20
+EBR_CO      ---     0.000           CLKR to DO[18]         \u_ram/mux_31 (from clk_osc)
+Route         3   e 0.879                                  instruction[10]
+LUT4        ---     0.408              C to Z              \u_decoder/i2_3_lut_adj_5
+Route         4   e 0.937                                  \u_decoder/n4358
+LUT4        ---     0.408              A to Z              \u_decoder/i2_3_lut_rep_17
+Route         9   e 1.099                                  n4634
+LUT4        ---     0.408              A to Z              \u_decoder/i3_4_lut
+Route        10   e 1.120                                  \u_decoder/n4261
+LUT4        ---     0.408              B to Z              \u_decoder/i2_3_lut_rep_14
+Route         1   e 0.660                                  n4631
+LUT4        ---     0.408              B to Z              \u_bus_mux/i1213_4_lut
+Route         8   e 1.075                                  \u_bus_mux/n3482
+LUT4        ---     0.408              B to Z              \u_bus_mux/i572_2_lut
+Route         1   e 0.020                                  \u_bus_mux/n1_adj_141
+MUXL5       ---     0.193           BLUT to Z              \u_bus_mux/sel_1__I_0_Mux_0_i3
+Route         1   e 0.660                                  wire_main_bus[0]
+LUT4        ---     0.408              B to Z              \u_mux_alu_b/b_7__I_0_i1_3_lut
+Route         1   e 0.660                                  wire_alu_b[0]
                   --------
-                    9.722  (27.2% logic, 72.8% route), 6 logic levels.
+                   10.159  (30.0% logic, 70.0% route), 9 logic levels.
 
 
-Error:  The following path violates requirements by 4.981ns
+Error:  The following path violates requirements by 5.292ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \u_div/cnt_59__i8  (from clk +)
-   Destination:    FD1P3AX    SP             \w/w_out_i0_i5  (to clk +)
+   Source:         PDPW8KC    CLKR           \u_ram/mux_31  (from clk_osc +)
+   Destination:    FD1P3AX    D              \u_w/w_out_i0_i0  (to clk_osc +)
 
-   Delay:                   9.722ns  (27.2% logic, 72.8% route), 6 logic levels.
+   Delay:                  10.159ns  (30.0% logic, 70.0% route), 9 logic levels.
 
  Constraint Details:
 
-      9.722ns data_path \u_div/cnt_59__i8 to \w/w_out_i0_i5 violates
+     10.159ns data_path \u_ram/mux_31 to \u_w/w_out_i0_i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 4.981ns
+      0.133ns L_S requirement (totaling 4.867ns) by 5.292ns
 
- Path Details: \u_div/cnt_59__i8 to \w/w_out_i0_i5
+ Path Details: \u_ram/mux_31 to \u_w/w_out_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \u_div/cnt_59__i8 (from clk)
-Route         2   e 1.002                                  \u_div/cnt[8]
-LUT4        ---     0.448              B to Z              \u_div/i6_4_lut
-Route         1   e 0.788                                  \u_div/n16
-LUT4        ---     0.448              D to Z              \u_div/i1_4_lut
-Route         1   e 0.788                                  \u_div/n12
-LUT4        ---     0.448              D to Z              \u_div/i557_4_lut
-Route        27   e 1.695                                  n645
-LUT4        ---     0.448              B to Z              i568_2_lut_rep_4
-Route        17   e 1.519                                  clk_enable_24
-LUT4        ---     0.448              D to Z              \u_decoder/i3_4_lut
-Route         8   e 1.287                                  clk_enable_20
+EBR_CO      ---     0.000           CLKR to DO[18]         \u_ram/mux_31 (from clk_osc)
+Route         3   e 0.879                                  instruction[12]
+LUT4        ---     0.408              A to Z              \u_decoder/i2_3_lut_adj_5
+Route         4   e 0.937                                  \u_decoder/n4358
+LUT4        ---     0.408              A to Z              \u_decoder/i2_3_lut_rep_17
+Route         9   e 1.099                                  n4634
+LUT4        ---     0.408              A to Z              \u_decoder/i3_4_lut
+Route        10   e 1.120                                  \u_decoder/n4261
+LUT4        ---     0.408              B to Z              \u_decoder/i2_3_lut_rep_14
+Route         1   e 0.660                                  n4631
+LUT4        ---     0.408              B to Z              \u_bus_mux/i1213_4_lut
+Route         8   e 1.075                                  \u_bus_mux/n3482
+LUT4        ---     0.408              B to Z              \u_bus_mux/i572_2_lut
+Route         1   e 0.020                                  \u_bus_mux/n1_adj_141
+MUXL5       ---     0.193           BLUT to Z              \u_bus_mux/sel_1__I_0_Mux_0_i3
+Route         1   e 0.660                                  wire_main_bus[0]
+LUT4        ---     0.408              B to Z              \u_mux_alu_b/b_7__I_0_i1_3_lut
+Route         1   e 0.660                                  wire_alu_b[0]
                   --------
-                    9.722  (27.2% logic, 72.8% route), 6 logic levels.
+                   10.159  (30.0% logic, 70.0% route), 9 logic levels.
 
 
-Error:  The following path violates requirements by 4.981ns
+Error:  The following path violates requirements by 5.292ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \u_div/cnt_59__i8  (from clk +)
-   Destination:    FD1P3AX    SP             \w/w_out_i0_i4  (to clk +)
+   Source:         PDPW8KC    CLKR           \u_ram/mux_31  (from clk_osc +)
+   Destination:    FD1P3AX    D              \u_w/w_out_i0_i0  (to clk_osc +)
 
-   Delay:                   9.722ns  (27.2% logic, 72.8% route), 6 logic levels.
+   Delay:                  10.159ns  (30.0% logic, 70.0% route), 9 logic levels.
 
  Constraint Details:
 
-      9.722ns data_path \u_div/cnt_59__i8 to \w/w_out_i0_i4 violates
+     10.159ns data_path \u_ram/mux_31 to \u_w/w_out_i0_i0 violates
       5.000ns delay constraint less
-      0.259ns LCE_S requirement (totaling 4.741ns) by 4.981ns
+      0.133ns L_S requirement (totaling 4.867ns) by 5.292ns
 
- Path Details: \u_div/cnt_59__i8 to \w/w_out_i0_i4
+ Path Details: \u_ram/mux_31 to \u_w/w_out_i0_i0
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \u_div/cnt_59__i8 (from clk)
-Route         2   e 1.002                                  \u_div/cnt[8]
-LUT4        ---     0.448              B to Z              \u_div/i6_4_lut
-Route         1   e 0.788                                  \u_div/n16
-LUT4        ---     0.448              D to Z              \u_div/i1_4_lut
-Route         1   e 0.788                                  \u_div/n12
-LUT4        ---     0.448              D to Z              \u_div/i557_4_lut
-Route        27   e 1.695                                  n645
-LUT4        ---     0.448              B to Z              i568_2_lut_rep_4
-Route        17   e 1.519                                  clk_enable_24
-LUT4        ---     0.448              D to Z              \u_decoder/i3_4_lut
-Route         8   e 1.287                                  clk_enable_20
+EBR_CO      ---     0.000           CLKR to DO[18]         \u_ram/mux_31 (from clk_osc)
+Route         3   e 0.879                                  instruction[13]
+LUT4        ---     0.408              B to Z              \u_decoder/i2_3_lut_adj_5
+Route         4   e 0.937                                  \u_decoder/n4358
+LUT4        ---     0.408              A to Z              \u_decoder/i2_3_lut_rep_17
+Route         9   e 1.099                                  n4634
+LUT4        ---     0.408              A to Z              \u_decoder/i3_4_lut
+Route        10   e 1.120                                  \u_decoder/n4261
+LUT4        ---     0.408              B to Z              \u_decoder/i2_3_lut_rep_14
+Route         1   e 0.660                                  n4631
+LUT4        ---     0.408              B to Z              \u_bus_mux/i1213_4_lut
+Route         8   e 1.075                                  \u_bus_mux/n3482
+LUT4        ---     0.408              B to Z              \u_bus_mux/i572_2_lut
+Route         1   e 0.020                                  \u_bus_mux/n1_adj_141
+MUXL5       ---     0.193           BLUT to Z              \u_bus_mux/sel_1__I_0_Mux_0_i3
+Route         1   e 0.660                                  wire_main_bus[0]
+LUT4        ---     0.408              B to Z              \u_mux_alu_b/b_7__I_0_i1_3_lut
+Route         1   e 0.660                                  wire_alu_b[0]
                   --------
-                    9.722  (27.2% logic, 72.8% route), 6 logic levels.
+                   10.159  (30.0% logic, 70.0% route), 9 logic levels.
 
-Warning: 9.981 ns is the maximum delay for this constraint.
+Warning: 10.292 ns is the maximum delay for this constraint.
 
 
 <A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -143,7 +161,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk]                     |     5.000 ns|     9.981 ns|     6 *
+clk0 [get_nets clk_osc]                 |     5.000 ns|    10.292 ns|     9 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -153,23 +171,31 @@ clk0 [get_nets clk]                     |     5.000 ns|     9.981 ns|     6 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n645                                    |      27|     997|     98.32%
+n3558                                   |      26|     951|     69.16%
                                         |        |        |
-\u_div/n12                              |       1|     640|     63.12%
+\u_clk_div/n12                          |       1|     663|     48.22%
                                         |        |        |
-clk_enable_24                           |      17|     488|     48.13%
+\u_clk_div/n18                          |       1|     228|     16.58%
                                         |        |        |
-\u_div/n16                              |       1|     240|     23.67%
+\u_clk_div/n19                          |       1|     228|     16.58%
                                         |        |        |
-\u_div/n17                              |       1|     240|     23.67%
+\u_decoder/n4261                        |      10|     216|     15.71%
                                         |        |        |
-clk_enable_20                           |       8|     168|     16.57%
+clk_osc_enable_19                       |       8|     208|     15.13%
                                         |        |        |
-\u_div/n1066                            |       1|     160|     15.78%
+clk_osc_enable_12                       |      10|     200|     14.55%
                                         |        |        |
-\u_div/n1068                            |       1|     160|     15.78%
+clk_osc_enable_26                       |       8|     200|     14.55%
                                         |        |        |
-\u_div/n15                              |       1|     120|     11.83%
+n3324                                   |       9|     180|     13.09%
+                                        |        |        |
+\u_clk_div/n17                          |       1|     171|     12.44%
+                                        |        |        |
+n4634                                   |       9|     160|     11.64%
+                                        |        |        |
+\u_clk_div/n4400                        |       1|     144|     10.47%
+                                        |        |        |
+\u_clk_div/n4402                        |       1|     144|     10.47%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -177,12 +203,12 @@ clk_enable_20                           |       8|     168|     16.57%
 <A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
 ---------------
 
-Timing errors: 1014  Score: 2392992
+Timing errors: 1375  Score: 1826408
 
-Constraints cover  1584 paths, 108 nets, and 294 connections (94.5% coverage)
+Constraints cover  2166 paths, 226 nets, and 530 connections (67.1% coverage)
 
 
-Peak memory: 64835584 bytes, TRCE: 1044480 bytes, DLYMAN: 0 bytes
+Peak memory: 69156864 bytes, TRCE: 724992 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
 
 

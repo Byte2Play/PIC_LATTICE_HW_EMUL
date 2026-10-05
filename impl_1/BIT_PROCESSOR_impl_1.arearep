@@ -1,66 +1,96 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  45 of 7485 (0.601%)
+Register bits:  47 of 7485 (0.628%)
 I/O cells:      9
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        14          100.0
-                            FD1P3AX         9          100.0
-                            FD1P3IX        14          100.0
-                            FD1P3JX         1          100.0
+                              CCU2D        16          100.0
+                            FD1P3AX        16          100.0
+                            FD1P3IX         9          100.0
                             FD1S3AX         1          100.0
-                            FD1S3IX        20          100.0
+                            FD1S3IX        21          100.0
                                 GSR         1          100.0
                                  IB         1          100.0
-                               LUT4        41          100.0
+                            L6MUX21         8          100.0
+                               LUT4       107          100.0
                                  OB         8          100.0
                                OSCH         1          100.0
+                            PDPW8KC         1          100.0
+                              PFUMX        24          100.0
+                           SPR16X4C        16          100.0
 SUB MODULES
-                clk_div(DIV=806000)         1
+                            bus_mux         1
+               clk_div(DIV=1209000)         1
                             decoder         1
-                                mem         1
+                                mux         1
                                  pc         1
+                                ram         1
                                   w         1
-                              TOTAL       116
+                               w_U0         1
+                              TOTAL       238
 ----------------------------------------------------------------------
 Report for cell w.v1
-Instance Path : w
+Instance Path : u_w
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX         8           88.9
+                            FD1P3AX         8           50.0
                               TOTAL         8
-----------------------------------------------------------------------
-Report for cell pc.v1
-Instance Path : u_pc
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D         3           21.4
-                            FD1P3IX         5           35.7
-                               LUT4        16           39.0
-                              TOTAL        24
-----------------------------------------------------------------------
-Report for cell mem.v1
-Instance Path : u_mem
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX         1           11.1
-                            FD1P3IX         9           64.3
-                            FD1P3JX         1          100.0
-                              TOTAL        11
-----------------------------------------------------------------------
-Report for cell clk_div(DIV=806000).v1
-Instance Path : u_div
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        11           78.6
-                            FD1S3AX         1          100.0
-                            FD1S3IX        20          100.0
-                               LUT4         8           19.5
-                              TOTAL        40
 ----------------------------------------------------------------------
 Report for cell decoder.v1
 Instance Path : u_decoder
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         2            4.9
-                              TOTAL         2
+                               LUT4        25           23.4
+                              TOTAL        25
+----------------------------------------------------------------------
+Report for cell ram.v1
+Instance Path : u_ram
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            L6MUX21         8          100.0
+                               LUT4        32           29.9
+                            PDPW8KC         1          100.0
+                              PFUMX        16           66.7
+                           SPR16X4C        16          100.0
+                              TOTAL        73
+----------------------------------------------------------------------
+Report for cell mux.v1
+Instance Path : u_mux_alu_b
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            6.5
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell w_U0.v1
+Instance Path : u_fsr
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         8           50.0
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell bus_mux.v1
+Instance Path : u_bus_mux
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         9            8.4
+                              PFUMX         8           33.3
+                              TOTAL        17
+----------------------------------------------------------------------
+Report for cell clk_div(DIV=1209000).v1
+Instance Path : u_clk_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        11           68.8
+                            FD1S3AX         1          100.0
+                            FD1S3IX        21          100.0
+                               LUT4         8            7.5
+                              TOTAL        41
+----------------------------------------------------------------------
+Report for cell pc.v1
+Instance Path : u_pc
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5           31.3
+                            FD1P3IX         9          100.0
+                               LUT4         9            8.4
+                              TOTAL        23
